@@ -99,7 +99,7 @@
         <ul class="nav nav-sidebar nav-vertical nav-uppercase">
             <li
                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-41 current_page_item menu-item-50">
-                <a href="{{ route('home-page') }}" aria-current="page">Trang chủ</a>
+                <a href="{{ route('home_page') }}" aria-current="page">Trang chủ</a>
             </li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243"><a
                     href="">Giới thiệu</a></li>

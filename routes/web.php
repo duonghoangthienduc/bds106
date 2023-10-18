@@ -15,24 +15,28 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('public.index');
-})->name('home-page');
+})->name('home_page');
 
 Route::get('/gioi-thieu', function () {
     return view('public.pages.introduce');
-})->name('introduce-page');
+})->name('introduce_page');
 
 Route::get('/du-an', function () {
     return view('public.pages.projects');
-})->name('projects-page');
+})->name('projects_page');
 
 Route::get('/linh-vuc-hoat-dong', function () {
-    return view('public.pages.fieldOfActivity');
-})->name('fieldOfActivity-page');
+    return view('public.pages.field-of-activity');
+})->name('field_of_activity_page');
 
 Route::get('/tuyen-dung', function () {
     return view('public.pages.recruitment');
-})->name('recruitment-page');
+})->name('recruitment_page');
 
 Route::get('/lien-he', function () {
     return view('public.pages.contact');
-})->name('contact-page');
+})->name('contact_page');
+
+Route::get('/tin-tuc', function () {
+    return view('public.pages.news');
+})->name('news_page');

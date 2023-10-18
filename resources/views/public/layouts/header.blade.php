@@ -42,37 +42,31 @@
                         class="header-nav header-nav-main nav nav-right  nav-size-medium nav-spacing-xlarge nav-uppercase">
                         <li id="menu-item-50"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-41 current_page_item menu-item-50 menu-item-design-default">
-                            <a href="{{ route('home-page') }}" aria-current="page" class="nav-top-link">Trang
-                                chủ</a>
+                            <a href="{{ route('home_page') }}" aria-current="page" class="nav-top-link">Trang chủ</a>
                         </li>
                         <li id="menu-item-243"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243 menu-item-design-default">
-                            <a href="{{ route('introduce-page') }}" class="nav-top-link">Giới
-                                thiệu</a>
+                            <a href="{{ route('introduce_page') }}" class="nav-top-link">Giới thiệu</a>
                         </li>
                         <li id="menu-item-53"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53 menu-item-design-default">
-                            <a href="{{ route('projects-page') }}" class="nav-top-link">Dự án</a>
+                            <a href="{{ route('projects_page') }}" class="nav-top-link">Dự án</a>
                         </li>
                         <li id="menu-item-413"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-413 menu-item-design-default">
-                            <a href="{{ route('fieldOfActivity-page') }}"
-                                class="nav-top-link">Lĩnh vực hoạt động</a>
+                            <a href="{{ route('field_of_activity_page') }}" class="nav-top-link">Lĩnh vực hoạt động</a>
                         </li>
                         <li id="menu-item-415"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-415 menu-item-design-default">
-                            <a href="{{ route('recruitment-page') }}"
-                                class="nav-top-link">Tuyển dụng</a>
+                            <a href="{{ route('recruitment_page') }}" class="nav-top-link">Tuyển dụng</a>
                         </li>
                         <li id="menu-item-244"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244 menu-item-design-default">
-                            <a href="{{ route('contact-page') }}" class="nav-top-link">Liên
-                                hệ</a>
+                            <a href="{{ route('contact_page') }}" class="nav-top-link">Liên hệ</a>
                         </li>
                         <li id="menu-item-245"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-245 menu-item-design-default">
-                            <a href="http://batdongsan106.webdaitin.biz/chuyen-muc/tin-tuc/" class="nav-top-link">Tin
-                                tức</a>
+                            <a href="{{ route('news_page') }}" lass="nav-top-link">Tin tức</a>
                         </li>
                     </ul>
                 </div>

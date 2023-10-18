@@ -6,10 +6,6 @@
             <section class="section" id="section_438243470">
                 <div class="bg section-bg fill bg-fill  bg-loaded">
 
-
-
-
-
                 </div>
 
                 <div class="section-content relative">

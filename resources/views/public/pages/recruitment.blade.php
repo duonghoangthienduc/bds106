@@ -9,10 +9,6 @@
             <div class="row row-large row-divided ">
 
                 <div class="large-9 col">
-
-
-
-
                     <div class="row large-columns-1 medium-columns- small-columns-1">
                         <div class="col post-item">
                             <div class="col-inner">
