@@ -46,11 +46,8 @@
                                         </div>
                                     </div>
 
-
-
                                     <div id="col-1976460391" class="col medium-3 small-6 large-3">
                                         <div class="col-inner">
-
 
                                             <div class="item-so">
                                                 <div class="wrap">

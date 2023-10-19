@@ -40,3 +40,14 @@ Route::get('/lien-he', function () {
 Route::get('/tin-tuc', function () {
     return view('public.pages.news');
 })->name('news_page');
+
+Route::get('/admin/login', function () {});
+
+Route::prefix('/admin')->group( 
+    function () {
+        Route::get('/dashboard', function(){
+            return view('admin.index');
+        })->name('admin.dashboard');
+    }
+);
+// ->middleware(['auth','user.role']);
