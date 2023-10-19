@@ -8,15 +8,15 @@
         html.className = html.className.replace(/\bno-js\b/, 'js')
     })(document.documentElement);
 </script>
-<title>Bất Động Sản 106</title>
+<title>@yield('head-title')</title>
 <meta name='robots' content='noindex,nofollow' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title="Dòng thông tin Bất Động Sản 106 &raquo;"
+{{-- <link rel="alternate" type="application/rss+xml" title="Dòng thông tin Bất Động Sản 106 &raquo;"
     href="http://batdongsan106.webdaitin.biz/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Dòng phản hồi Bất Động Sản 106 &raquo;"
-    href="http://batdongsan106.webdaitin.biz/comments/feed/" />
+    href="http://batdongsan106.webdaitin.biz/comments/feed/" /> --}}
 <script type="text/javascript">
     window._wpemojiSettings = {
         "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/",

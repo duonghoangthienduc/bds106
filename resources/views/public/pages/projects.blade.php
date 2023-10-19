@@ -1,11 +1,13 @@
 @extends('public.layout')
-
+@section('head-title')
+Sản phẩm - Bất Động Sản 106
+@endsection
 @section('content')
     <div class="shop-page-title category-page-title page-title ">
         <div class="page-title-inner flex-row  medium-flex-wrap container">
             <div class="flex-col flex-grow medium-text-center">
                 <div class="is-large">
-                    <nav class="woocommerce-breadcrumb breadcrumbs uppercase"><a href="{{ route('home-page') }}">Trang chủ</a>
+                    <nav class="woocommerce-breadcrumb breadcrumbs uppercase"><a href="{{ route('home_page') }}">Trang chủ</a>
                         <span class="divider">&#47;</span> Dự án
                     </nav>
                 </div>

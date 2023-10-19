@@ -1,5 +1,7 @@
 @extends('public.layout')
-
+@section('head-title')
+Liên hệ - Bất Động Sản 106
+@endsection
 @section('content')
     <main id="main" class="">
         <div id="content" role="main" class="content-area">
