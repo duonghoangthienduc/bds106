@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,13 +42,18 @@ Route::get('/tin-tuc', function () {
     return view('public.pages.news');
 })->name('news_page');
 
-Route::get('/admin/login', function () {});
+Route::middleware(['user.hasLogin'])->group(function () {
+    Route::get('/login', [LoginController::class ,'index'])->name('admin.login');
+    Route::post('/login', [LoginController::class ,'store']);
+});
 
-Route::prefix('/admin')->group( 
-    function () {
-        Route::get('/dashboard', function(){
-            return view('admin.index');
-        })->name('admin.dashboard');
-    }
-);
-// ->middleware(['auth','user.role']);
+Route::middleware(['user.role'])->group(function () {
+    Route::prefix('/admin')->group( 
+        function () {
+            Route::get('/logout', [LoginController::class, 'logOut'])->name('admin.logout');
+            Route::get('/dashboard', function(){
+                return view('admin.index');
+            })->name('admin.dashboard');
+        }
+    );
+});

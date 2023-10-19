@@ -7,7 +7,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class CheckRoleUser
+class HasLogin
 {
     /**
      * Handle an incoming request.
@@ -16,11 +16,9 @@ class CheckRoleUser
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!Auth::user()) {
-            return redirect()->route('admin.login');
-        } else if (Auth::user()->role_id == 1 && Auth::user()->is_active == 1) {
-            return $next($request);
-        } 
-        return redirect()->route('home_page');
+        if (Auth::user()) {
+            return redirect()->route('admin.dashboard');
+        }
+        return $next($request);
     }
 }

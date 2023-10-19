@@ -2,7 +2,7 @@
     <a href="" class="brand-link">
         <img src="/admin/dist/img/Logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
-        <span class="brand-text font-weight-light">Fashion Shop</span>
+        <span class="brand-text font-weight-light">BDS 106</span>
     </a>
     <div class="sidebar">
         <div class="user-panel">
@@ -11,7 +11,7 @@
                     <img src="/admin/dist/img/admin.png" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    {{-- <a href="#" class="d-block">{{ Auth::user()->name }}</a> --}}
+                    <a href="#" class="d-block">{{ Auth::user()->name ?? " " }}</a>
                 </div>
             </div>
             <nav class="mt-3 pb-3">
@@ -142,7 +142,7 @@
 
 </aside>
 
-{{-- <div class="modal fade" id="dialogLogout" tabindex="-1" role="dialog" aria-labelledby="dialogLogout"
+<div class="modal fade" id="dialogLogout" tabindex="-1" role="dialog" aria-labelledby="dialogLogout"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -166,4 +166,4 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div>
