@@ -8,8 +8,19 @@
         <div class="slider-wrapper relative" id="slider-935399934">
             <div class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-normal"
                 data-flickity-options='{"cellAlign": "center", "imagesLoaded": true, "lazyLoad": 1, "freeScroll": false, "wrapAround": true, "autoPlay": 6000, "pauseAutoPlayOnHover" : true, "prevNextButtons": true, "contain" : true, "adaptiveHeight" : true, "dragThreshold" : 10, "percentPosition": true, "pageDots": true, "rightToLeft": false, "draggable": true, "selectedAttraction": 0.1, "parallax" : 0, "friction": 0.6}'>
-
-                <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_2038611903">
+                @forelse ($banner as $item)
+                    <div class="img has-hover x md-x lg-x y md-y lg-y" id="{{$item->id}}">
+                        <div class="img-inner dark">
+                            <img width="1345" height="473"
+                                src="{{ $item->thumb }}"
+                                class="attachment-original size-original" alt="" loading="lazy"
+                                srcset="{{ $item->thumb }}"
+                                sizes="(max-width: 1345px) 100vw, 1345px" />
+                        </div>
+                    </div>
+                @empty
+                @endforelse
+                {{-- <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_2038611903">
                     <div class="img-inner dark">
                         <img width="1345" height="473"
                             src="http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/03/the-park-vi-tri-tuyet-dep-sat-cong-vien-vinhomes-central-park.jpg"
@@ -24,7 +35,6 @@
                         }
                     </style>
                 </div>
-
                 <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1513774273">
                     <div data-animate="bounceIn">
                         <div class="img-inner image-zoom-long dark">
@@ -40,8 +50,7 @@
                             width: 100%;
                         }
                     </style>
-                </div>
-
+                </div> --}}
             </div>
             <div class="loading-spin dark large centered"></div>
 

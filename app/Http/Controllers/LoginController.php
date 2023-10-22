@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Auth;
 use Illuminate\Http\Request;
+use Session;
 
 class LoginController extends Controller
 {
@@ -35,14 +36,16 @@ class LoginController extends Controller
         ]);
         $remember = $request->input('remember') ? true : false;
         if (Auth::attempt($credentials, $remember)) {
+            Session::flash('success','Đăng nhập thành công');
             return redirect()->route('admin.dashboard');
-        } else
-            return redirect()->route('home_page');
+        }
+        return redirect()->route('home_page');
     }
 
     public function logOut()
     {
         Auth::logout();
+        Session::flash('success','Đăng xuất thành công');
         return redirect()->route('admin.logout');
     }
 }

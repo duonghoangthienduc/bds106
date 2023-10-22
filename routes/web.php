@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BannerController;
+use App\Http\Controllers\FontendController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('public.index');
-})->name('home_page');
+Route::get('/', [FontendController::class, 'getHomeView'])->name('home_page');
 
 Route::get('/gioi-thieu', function () {
     return view('public.pages.introduce');
@@ -54,6 +54,33 @@ Route::middleware(['user.role'])->group(function () {
             Route::get('/dashboard', function(){
                 return view('admin.index');
             })->name('admin.dashboard');
+            Route::prefix('/banner')
+                    ->group(function () {
+                        Route::get(
+                            'add',
+                            [BannerController::class, 'create']
+                        )->name('banner.add');
+                        Route::post(
+                            'add',
+                            [BannerController::class, 'store']
+                        );
+                        Route::get(
+                            'update/{banner}/edit',
+                            [BannerController::class, 'edit']
+                        )->name('banner.update');
+                        Route::put(
+                            'update/{banner}/edit',
+                            [BannerController::class, 'update']
+                        );
+                        Route::delete(
+                            'remove',
+                            [BannerController::class, 'destroy']
+                        )->name('banner.delete');
+                        Route::get(
+                            '/',
+                            [BannerController::class, 'index']
+                        )->name('banner.list');
+                    });
         }
     );
 });
