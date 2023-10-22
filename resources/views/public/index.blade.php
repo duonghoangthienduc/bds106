@@ -1,13 +1,15 @@
 @extends('public.layout')
 @section('head-title')
-Bất Động Sản 106
+    Bất Động Sản 106
 @endsection
 @section('content')
     <main id="main" class="">
 
         <div id="content" role="main" class="content-area">
 
-            @include('public.patrials.banner')
+            @component('public.patrials.banner')
+                @slot('banner', $banner)
+            @endcomponent
 
             <section class="section section-nhay-so" id="section_1479736412">
                 <div class="bg section-bg fill bg-fill  bg-loaded">
@@ -114,8 +116,6 @@ Bất Động Sản 106
 
                     </div>
                 </div>
-
-
                 <style>
                     #section_1479736412 {
                         padding-top: 30px;
@@ -146,22 +146,11 @@ Bất Động Sản 106
 
                             </div>
                         </div>
-
-
-
                         <div id="col-1098045392" class="col div-no-padding small-12 large-12">
                             <div class="col-inner">
-
-
-
-
                                 <div id="product-grid-1450583303"
                                     class="row large-columns-3 medium-columns- small-columns-2 row-small row-masonry"
                                     data-packery-options='{"itemSelector": ".col", "gutter": 0, "presentageWidth" : true}'>
-
-
-
-
                                     <div class="col" data-animate="fadeInUp">
                                         <div class="col-inner">
 
@@ -410,7 +399,6 @@ Bất Động Sản 106
                                                         <div class="giatien">
                                                             <p>Giá từ:<span class="gia-tien"> 1,7 tỷ/căn</span></p>
                                                         </div>
-
                                                     </div>
                                                     <div class="price-wrapper">
                                                     </div>
@@ -559,9 +547,6 @@ Bất Động Sản 106
                                                                         <p class="from_the_blog_excerpt ">Năm 2018
                                                                             tiếp tục là một năm thuận lợi đối...
                                                                         </p>
-
-
-
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -854,14 +839,8 @@ Bất Động Sản 106
                                                     </div>
                                                     <div class="box-text text-center is-small">
                                                         <div class="box-text-inner blog-post-inner">
-
-
-                                                            <h5 class="post-title is-large ">“Sống sang &#8211; ở
-                                                                sành” tại Housinco Premium</h5>
+                                                            <h5 class="post-title is-large ">“Sống sang &#8211; ở sành” tại Housinco Premium</h5>
                                                             <div class="is-divider"></div>
-
-
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -871,8 +850,6 @@ Bất Động Sản 106
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
 
