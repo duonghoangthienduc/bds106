@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\View\Components\Alert;
+use App\View\Components\PostItem;
 use App\View\Composers\BannerCarousel;
 use App\View\Composers\CategoryDropDownMenu;
 use App\View\Composers\CategoryMenu;
@@ -32,5 +33,6 @@ class ViewServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::component('alert', Alert::class);
+        Blade::component('post_item', PostItem::class);
     }
 }

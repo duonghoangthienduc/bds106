@@ -34,13 +34,9 @@
                                         }
                                     </style>
                                 </div>
-
                                 <div class="row" id="row-1354868556">
-
                                     <div id="col-118288496" class="col medium-3 small-6 large-3">
                                         <div class="col-inner">
-
-
                                             <div class="item-so">
                                                 <div class="wrap">
                                                     <p class="text-tren"><span class="count-up">10</span><sup>+</sup></p>
@@ -61,13 +57,8 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-
                                     <div id="col-1120567496" class="col medium-3 small-6 large-3">
                                         <div class="col-inner">
-
-
                                             <div class="item-so">
                                                 <div class="wrap">
                                                     <p class="text-tren"><span class="count-up">200</span><sup>+</sup></p>
@@ -76,13 +67,8 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-
                                     <div id="col-428357414" class="col medium-3 small-6 large-3">
                                         <div class="col-inner">
-
-
                                             <div class="item-so">
                                                 <div class="wrap">
                                                     <p class="text-tren"><span class="count-up">50</span><sup>+</sup></p>
@@ -91,13 +77,8 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-
                                     <div id="col-1971495643" class="col medium-3 small-12 large-3">
                                         <div class="col-inner">
-
-
                                             <div class="item-so">
                                                 <div class="wrap">
                                                     <p class="text-tren"><span class="count-up">6</span><sup>+</sup>
@@ -107,13 +88,9 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
                 <style>
@@ -134,16 +111,13 @@
                                 <div class="tittle-home">
                                     <h3>DỰ ÁN ĐANG MỞ BÁN</h3>
                                 </div>
-                                <div id="gap-143173613" class="gap-element clearfix hide-for-medium"
-                                    style="display:block; height:auto;">
-
+                                <div id="gap-143173613" class="gap-element clearfix hide-for-medium" style="display:block; height:auto;">
                                     <style>
                                         #gap-143173613 {
                                             padding-top: 20px;
                                         }
                                     </style>
                                 </div>
-
                             </div>
                         </div>
                         <div id="col-1098045392" class="col div-no-padding small-12 large-12">
@@ -153,7 +127,6 @@
                                     data-packery-options='{"itemSelector": ".col", "gutter": 0, "presentageWidth" : true}'>
                                     <div class="col" data-animate="fadeInUp">
                                         <div class="col-inner">
-
                                             <div class="badge-container absolute left top z-1">
                                             </div>
                                             <div class="product-small box has-hover box-normal box-text-bottom">
@@ -192,11 +165,8 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <div class="col" data-animate="fadeInUp">
                                         <div class="col-inner">
-
                                             <div class="badge-container absolute left top z-1">
                                             </div>
                                             <div class="product-small box has-hover box-normal box-text-bottom">
@@ -234,11 +204,8 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <div class="col" data-animate="fadeInUp">
                                         <div class="col-inner">
-
                                             <div class="badge-container absolute left top z-1">
                                             </div>
                                             <div class="product-small box has-hover box-normal box-text-bottom">
@@ -277,8 +244,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <div class="col" data-animate="fadeInUp">
                                         <div class="col-inner">
 
@@ -319,8 +284,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <div class="col" data-animate="fadeInUp">
                                         <div class="col-inner">
 
@@ -361,47 +324,40 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <div class="col" data-animate="fadeInUp">
                                         <div class="col-inner">
-
                                             <div class="badge-container absolute left top z-1">
                                             </div>
                                             <div class="product-small box has-hover box-normal box-text-bottom">
                                                 <div class="box-image">
                                                     <div class="image-cover" style="padding-top:56%;">
-                                                        <a href="http://batdongsan106.webdaitin.biz/chung-cu-stellar-garden/"
-                                                            aria-label="Chung cư Stellar Garden">
+                                                        <a href="http://batdongsan106.webdaitin.biz/chung-cu-stellar-garden/" aria-label="Chung cư Stellar Garden">
                                                             <img width="247" height="296"
                                                                 src="http://batdongsan106.webdaitin.biz/wp-content/uploads/2019/03/phoi-canh-dem-247x296.jpg"
                                                                 class="show-on-hover absolute fill hide-for-small back-image"
-                                                                alt="" loading="lazy" /><img width="247"
-                                                                height="296"
+                                                                alt="" loading="lazy" />
+                                                            <img width="247" height="296"
                                                                 src="http://batdongsan106.webdaitin.biz/wp-content/uploads/2019/03/tong-quan-stellar-garden-2-247x296.jpg"
                                                                 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                alt="" loading="lazy" /> </a>
+                                                                alt="" loading="lazy" /> 
+                                                        </a>
                                                     </div>
-                                                    <div class="image-tools top right show-on-hover">
-                                                    </div>
-                                                    <div
-                                                        class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                                    </div>
+                                                    <div class="image-tools top right show-on-hover"></div>
+                                                    <div lass="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover"></div>
                                                 </div>
-
                                                 <div class="box-text text-center">
                                                     <div class="title-wrapper">
                                                         <p class="name product-title woocommerce-loop-product__title">
                                                             <a href="http://batdongsan106.webdaitin.biz/chung-cu-stellar-garden/"
-                                                                class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Chung
-                                                                cư Stellar Garden</a>
+                                                                class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                Chung cư Stellar Garden</a>
                                                         </p>
                                                         <div class="giatien">
                                                             <p>Giá từ:<span class="gia-tien"> 1,7 tỷ/căn</span></p>
                                                         </div>
                                                     </div>
-                                                    <div class="price-wrapper">
-                                                    </div>
+                                                    {{-- <div class="price-wrapper">
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -839,7 +795,8 @@
                                                     </div>
                                                     <div class="box-text text-center is-small">
                                                         <div class="box-text-inner blog-post-inner">
-                                                            <h5 class="post-title is-large ">“Sống sang &#8211; ở sành” tại Housinco Premium</h5>
+                                                            <h5 class="post-title is-large ">“Sống sang &#8211; ở sành” tại
+                                                                Housinco Premium</h5>
                                                             <div class="is-divider"></div>
                                                         </div>
                                                     </div>

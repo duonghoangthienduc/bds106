@@ -186,6 +186,13 @@ href="{{ asset('public/css/ez-toc.css') }}" type='text/css' media='all' />
     .bg-loaded {
         opacity: 1;
     }
+    .line-3 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;/* number of lines to show */
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
 </style>
 <noscript>
     <style>
@@ -553,3 +560,4 @@ href="{{ asset('public/css/ez-toc.css') }}" type='text/css' media='all' />
         });
     });
 </script>
+@yield('styles')

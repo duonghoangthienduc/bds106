@@ -95,6 +95,33 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-book-open"></i>
+                        <p>
+                            Bài viết (Post)
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a 
+                            href="{{ route('post.add') }}" 
+                            class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Thêm bài viết</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a 
+                            href="{{ route('post.list') }}" 
+                            class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Danh sách bài viết</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-person-booth"></i>
                         <p>
                             Khách hàng (Customer)
