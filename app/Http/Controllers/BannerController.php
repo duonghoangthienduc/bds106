@@ -35,7 +35,7 @@ class BannerController extends Controller
         ], [
             'name_banner.required' => 'Tên banner không được để trống',
         ]);
-        $path = storeImage($request->file('thumb'));
+        $path = storeImage($request->file('thumb'), 'banner');
         $nameFile = str_replace("public/", "/storage/", $path);
         $data = Banner::create(array_merge($request->all(), ['thumb' => $nameFile]));
         if ($data) {
@@ -70,7 +70,7 @@ class BannerController extends Controller
             $file = $request->input('img_category');
             $status = removeImage($file);
             if ($status) {
-                $path = storeImage($request->file('thumb'));
+                $path = storeImage($request->file('thumb'), 'banner');
                 $newFile = str_replace("public/", "/storage/", $path);
                 $updateStatus = $banner->update([
                     'name_banner' => $request->input('name_banner'),

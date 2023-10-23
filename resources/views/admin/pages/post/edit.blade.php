@@ -4,7 +4,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Chỉnh sửa danh mục</h3>
+            <h3 class="card-title">Chỉnh sửa bài viết</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -13,19 +13,29 @@
             <div class="card-body">
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label>Tiêu đề</label>
-                        <input type="text" class="form-control" name="name_banner" placeholder="Nhập tiêu đề"
-                            value="{{ $data->name_banner }}">
+                        <label>Tiêu đề bài viết</label>
+                        <input type="text" class="form-control" name="name_post" placeholder="Nhập tiêu đề" value="{{ $data->name_post }}">
                     </div>
                     <div class="form-group col-md-6">
-                        <label>Thứ tự</label>
-                        <input type="number" class="form-control" name="number_sort" value="{{ $data->number_sort }}">
+                        <label>Danh mục bài viết</label>
+                        <select name="post_cate_id" class="form-control">
+                            @forelse ($postCate as $cate)
+                                <option value="{{ $cate->id }}" @if($cate->id == $data->post_cate_id ) selected @endif>{{ $cate->post_cate_name }}</option>
+                            @empty
+                                
+                            @endforelse
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
+                    <label>Mô tả ngắn</label>
+                    <textarea type="text" class="form-control" name="short_des" placeholder="Nhập miêu tả ngắn" id="short_des"
+                        rows="10" cols="80">{!! htmlspecialchars_decode($data->short_des) !!}</textarea>
+                </div>
+                <div class="form-group">
                     <label>Nội dung</label>
-                    <input type="text" class="form-control" name="banner_content" placeholder="Nhập nội dung"
-                        value="{{ $data->banner_content }}">
+                    <textarea type="text" class="form-control" name="post_content" placeholder="Nhập nội dung bài viết" id="post_content"
+                        rows="10" cols="80">{!! htmlspecialchars_decode($data->post_content) !!}</textarea>
                 </div>
                 <div class="form-group">
                     <label>Hình ảnh</label>
@@ -36,10 +46,10 @@
                     @endif
                 </div>
                 <div class="form-check">
-                        <input @if ((int) $data->is_active == 1) checked @endif type="radio" id="active" name="is_active" class="form-check-input" value="1">
+                        <input type="radio"  @if ((int) $data->is_active == 1)  checked  @endif id="active" name="is_active" class="form-check-input" value="1">
                         <label class="form-check-label" for="active">Kích hoạt</label>
                         <br>
-                        <input   @if ((int) $data->is_active == 0) checked @endif type="radio" id="non-active" name="is_active" class="form-check-input"
+                        <input type="radio" @if ((int) $data->is_active == 0)  checked  @endif id="non-active" name="is_active" class="form-check-input"
                             value="0">
                         <label class="form-check-label" for="non-active">Tắt</label>
                 </div>
@@ -75,4 +85,11 @@
             @csrf
         </form>
     </div>
+@endsection
+
+@section('scripts')
+<script>
+    CKEDITOR.replace('short_des');
+    CKEDITOR.replace('post_content');
+</script>
 @endsection

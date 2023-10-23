@@ -102,18 +102,17 @@
                 <a href="{{ route('home_page') }}" aria-current="page">Trang chủ</a>
             </li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243"><a
-                    href="">Giới thiệu</a></li>
+                    href="{{ route('introduce_page') }}">Giới thiệu</a></li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a
-                    href="">Dự án</a></li>
+                    href="{{ route('projects_page') }}">Dự án</a></li>
             <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-413"><a
-                    href="">Lĩnh vực hoạt
-                    động</a></li>
+                    href="{{ route('public.post', 'khac') }}">Lĩnh vực hoạt động</a></li>
             <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-415"><a
-                    href="">Tuyển dụng</a></li>
+                    href="{{ route('public.post', 'tuyen-dung') }}">Tuyển dụng</a></li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a
-                    href="">Liên hệ</a></li>
+                    href="{{ route('contact_page') }}">Liên hệ</a></li>
             <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-245"><a
-                    href="">Tin tức</a></li>
+                    href="{{ route('public.post', 'tin-tuc') }}">Tin tức</a></li>
         </ul>
     </div>
 </div>

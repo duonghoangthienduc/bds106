@@ -7,11 +7,10 @@
                 <div id="logo" class="flex-col logo">
                     <!-- Header logo -->
                     <a href="#" title="Bất Động Sản 106" rel="home">
-                        <img width="255" height="95"
-                            src="{{asset('public/imgs/logo.jpg')}}"
+                        <img width="255" height="95" src="{{ asset('public/imgs/logo.jpg') }}"
                             class="header_logo header-logo" alt="Bất Động Sản 106" /><img width="255" height="95"
-                            src="{{asset('public/imgs/logo2.jpg')}}"
-                            class="header-logo-dark" alt="Bất Động Sản 106" /></a>
+                            src="{{ asset('public/imgs/logo2.jpg') }}" class="header-logo-dark"
+                            alt="Bất Động Sản 106" /></a>
                 </div>
 
                 <!-- Mobile Left Elements -->
@@ -21,7 +20,6 @@
                             <a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay"
                                 data-color="" class="is-small" aria-label="Menu" aria-controls="main-menu"
                                 aria-expanded="false">
-
                                 <i class="icon-menu"></i>
                             </a>
                         </li>
@@ -29,10 +27,8 @@
                 </div>
 
                 <!-- Left Elements -->
-                <div class="flex-col hide-for-medium flex-left
-    flex-grow">
-                    <ul
-                        class="header-nav header-nav-main nav nav-left  nav-size-medium nav-spacing-xlarge nav-uppercase">
+                <div class="flex-col hide-for-medium flex-left flex-grow">
+                    <ul class="header-nav header-nav-main nav nav-left  nav-size-medium nav-spacing-xlarge nav-uppercase">
                     </ul>
                 </div>
 
@@ -54,11 +50,11 @@
                         </li>
                         <li id="menu-item-413"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-413 menu-item-design-default">
-                            <a href="{{ route('field_of_activity_page') }}" class="nav-top-link">Lĩnh vực hoạt động</a>
+                            <a href="{{ route('public.post', 'khac') }}" class="nav-top-link">Lĩnh vực hoạt động</a>
                         </li>
                         <li id="menu-item-415"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-415 menu-item-design-default">
-                            <a href="{{ route('recruitment_page') }}" class="nav-top-link">Tuyển dụng</a>
+                            <a href="{{ route('public.post', 'tuyen-dung') }}" class="nav-top-link">Tuyển dụng</a>
                         </li>
                         <li id="menu-item-244"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244 menu-item-design-default">
@@ -66,7 +62,7 @@
                         </li>
                         <li id="menu-item-245"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-245 menu-item-design-default">
-                            <a href="{{ route('news_page') }}" lass="nav-top-link">Tin tức</a>
+                            <a href="{{ route('public.post', 'tin-tuc') }}" lass="nav-top-link">Tin tức</a>
                         </li>
                     </ul>
                 </div>

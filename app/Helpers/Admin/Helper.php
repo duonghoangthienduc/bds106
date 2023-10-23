@@ -1,10 +1,10 @@
 <?php
 
 if (!function_exists('storeImage')) {
-    function storeImage($file)
+    function storeImage($file, $place = "image")
     {
         $path = Storage::putFile(
-            'public/banner/' . date('Y/m/d'),
+            'public/' . $place .'/' . date('Y/m/d'),
             $file,
         );
         return $path;
