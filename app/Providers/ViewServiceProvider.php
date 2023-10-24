@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\View\Components\Alert;
 use App\View\Components\PostItem;
+use App\View\Components\RelatedPost;
 use App\View\Composers\BannerCarousel;
 use App\View\Composers\CategoryDropDownMenu;
 use App\View\Composers\CategoryMenu;
@@ -34,5 +35,6 @@ class ViewServiceProvider extends ServiceProvider
     {
         Blade::component('alert', Alert::class);
         Blade::component('post_item', PostItem::class);
+        Blade::component('related_post', RelatedPost::class);
     }
 }

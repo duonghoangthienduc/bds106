@@ -17,23 +17,27 @@ class FontendController extends Controller
 
     public function getPostWithCategory(Request $request)
     {
-        $posts = PostCategory::where('slug', $request->slug)->first();
-        $posts = $posts->getPost;
+        $cateId = PostCategory::getPostCategoryBySlug($request->slug);
+        $posts = Post::getAllPostByPostCategory($cateId->id);
         switch ($request->slug) {
             case 'khac':
-                return view('public.pages.field-of-activity', compact('posts'));
+                $tilte = 'Lĩnh vực hoạt động';
+                return view('public.pages.blog', compact('posts', 'tilte'));
                 break;
             case 'tin-tuc':
-                return view('public.pages.news', compact('posts'));
+                $tilte = 'Tin tức';
+                return view('public.pages.blog', compact('posts', 'tilte'));
                 break;
             case 'tuyen-dung':
-                return view('public.pages.recruitment', compact('posts'));
+                $tilte = 'Tuyển dụng';
+                return view('public.pages.blog', compact('posts', 'tilte'));
                 break;
         }
     }
 
     public function getPostView(Request $request) {
         $post = Post::getContentPost($request->slug);
-        return view('public.pages.detail-post-view', compact('post'));
+        $relatedPosts = Post::relatedPost($post->post_cate_id, $post->id);
+        return view('public.pages.detail-blog', compact('post', 'relatedPosts'));
     }
 }

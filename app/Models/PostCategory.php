@@ -21,7 +21,11 @@ class PostCategory extends Model
         return self::where('is_active', 1)->get();
     }
 
-    public function getPost() {
+    public static function getPostCategoryBySlug($slug) {
+        return self::where('slug', $slug)->first();
+    }
+
+    public function post() {
         return $this->hasMany(Post::class, 'post_cate_id', 'id');
     }
 }

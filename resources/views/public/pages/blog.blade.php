@@ -1,10 +1,9 @@
 @extends('public.layout')
 @section('head-title')
-Tuyển dụng - Bất Động Sản 106
+    {{ $tilte }} - Bất Động Sản 106
 @endsection
 @section('content')
     <main id="main" class="">
-
         <div id="content" class="blog-wrapper blog-archive page-wrapper">
             <div class="row row-large row-divided ">
                 <div class="large-9 col">
@@ -14,13 +13,10 @@ Tuyển dụng - Bất Động Sản 106
                         @empty
                         @endforelse
                     </div>
-
+                    {{ $posts->links('pagination::simple-default') }}
                 </div>
                 @include('public.patrials.downloadItem')
             </div>
-
         </div>
-
-
     </main>
 @endsection
