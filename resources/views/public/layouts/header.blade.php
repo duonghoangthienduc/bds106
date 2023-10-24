@@ -68,7 +68,7 @@
                 </div>
 
                 <!-- Mobile Right Elements -->
-                <div class="flex-col show-for-medium flex-right">
+                {{-- <div class="flex-col show-for-medium flex-right">
                     <ul class="mobile-nav nav nav-right ">
                         <li class="header-search header-search-dropdown has-icon has-dropdown menu-item-has-children">
                             <a href="#" aria-label="Tìm kiếm" class="is-small"><i class="icon-search"></i></a>
@@ -103,7 +103,7 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
 
             </div>
 

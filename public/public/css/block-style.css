@@ -3060,7 +3060,7 @@ screen and (-ms-high-contrast:active) {
     color: #000;
     line-height: 1;
     vertical-align: middle;
-    /* -moz-appearance: textfield */
+    -moz-appearance: textfield
 }
 
 .wc-block-components-quantity-selector input.wc-block-components-quantity-selector__input:focus {
@@ -4046,10 +4046,10 @@ screen and (-ms-high-contrast:active) {
     color: #fff
 }
 
-/* .wc-block-components-form .wc-block-components-text-input input[type=number],
+.wc-block-components-form .wc-block-components-text-input input[type=number],
 .wc-block-components-text-input input[type=number] {
     -moz-appearance: textfield
-} */
+}
 
 .wc-block-components-form .wc-block-components-text-input input[type=number]::-webkit-inner-spin-button,
 .wc-block-components-form .wc-block-components-text-input input[type=number]::-webkit-outer-spin-button,

@@ -4,6 +4,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\FontendController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,9 +24,22 @@ Route::get('/gioi-thieu', function () {
     return view('public.pages.introduce');
 })->name('introduce_page');
 
-Route::get('/du-an', function () {
-    return view('public.pages.projects');
-})->name('projects_page');
+Route::get(
+    '/du-an',
+    [FontendController::class, 'getProjectView']
+)->name('projects_page');
+
+Route::get(
+    '/du-an/{slug}', 
+    [FontendController::class, 'projectDetail']
+)->name('project_detail');
+
+// Route::get(
+//     '/du-an/chi-tiet',
+//     function () {
+//         return view('public.pages.detail-project');
+//     }
+// )->name('project_detail');
 
 Route::get('/lien-he', function () {
     return view('public.pages.contact');
@@ -39,7 +53,8 @@ Route::get(
 Route::get(
     '/bai-viet/{slug}',
     [FontendController::class, 'getPostView']
-)->name('public.post_detail');;
+)->name('public.post_detail');
+;
 
 Route::middleware(['user.hasLogin'])->group(function () {
     Route::get('/login', [LoginController::class, 'index'])->name('admin.login');
@@ -107,6 +122,34 @@ Route::middleware(['user.role'])->group(function () {
                         '/',
                         [PostController::class, 'index']
                     )->name('post.list');
+                }
+            );
+            Route::prefix('/project')->group(
+                function () {
+                    Route::get(
+                        'add',
+                        [ProjectController::class, 'create']
+                    )->name('project.add');
+                    Route::post(
+                        'add',
+                        [ProjectController::class, 'store']
+                    );
+                    Route::get(
+                        'update/{project}/edit',
+                        [ProjectController::class, 'edit']
+                    )->name('project.update');
+                    Route::put(
+                        'update/{project}/edit',
+                        [ProjectController::class, 'update']
+                    );
+                    Route::delete(
+                        'remove',
+                        [ProjectController::class, 'destroy']
+                    )->name('project.delete');
+                    Route::get(
+                        '/',
+                        [ProjectController::class, 'index']
+                    )->name('project.list');
                 }
             );
         }

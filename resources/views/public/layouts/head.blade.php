@@ -155,12 +155,10 @@ href="{{ asset('public/css/ez-toc.css') }}" type='text/css' media='all' />
 <link rel='stylesheet' id='flatsome-googlefonts-css'
     href='//fonts.googleapis.com/css?family=Montserrat%3Aregular%2C700%2Cregular%2C700%2Cregular&#038;display=swap&#038;ver=3.9'
     type='text/css' media='all' />
-<script type='text/javascript' 
-    {{-- src='http://batdongsan106.webdaitin.biz/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' --}}
+<script type='text/javascript'
     src="{{asset('public/js/bds106-core.js')}}"
     id='jquery-core-js'></script>
 <script type='text/javascript'
-    {{-- src='http://batdongsan106.webdaitin.biz/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' --}}
     src="{{asset('public/js/bds106-migrate.js')}}"
     id='jquery-migrate-js'></script>
 {{-- <link rel="https://api.w.org/" href="http://batdongsan106.webdaitin.biz/wp-json/" />

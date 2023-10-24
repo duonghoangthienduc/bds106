@@ -30,7 +30,7 @@
 
 .lSSlideOuter {
     overflow: hidden;
-    /* user-select: none */
+    user-select: none
 }
 
 .lightSlider:after,
@@ -135,7 +135,7 @@
     -o-transform: translate3d(0, 0, 0);
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
-    /* user-select: none */
+    user-select: none
 }
 
 .lSSlideOuter .lSPager.lSGallery li {

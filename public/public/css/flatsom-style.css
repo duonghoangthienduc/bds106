@@ -82,10 +82,10 @@ h5.post-title{
     color: #f48121;
 }
 .section-nhay-so .item-so .wrap{
-        margin: auto;
+    margin: auto;
     border: 4px solid #f48121;
     border-radius: 50%;
-    /* overflow: hidden; */
+    overflow: hidden;
     height: 180px;
     width: 180px;
 }
@@ -435,7 +435,7 @@ footer.entry-meta {
     max-width: 850px;
     margin: 0 auto;
     border: none;
-    /* border: 1px solid #f48121; */
+    border: 1px solid #f48121;
     border-radius: 0px;
     padding: 18px 14px;
     overflow: hidden;
@@ -449,11 +449,11 @@ footer.entry-meta {
     font-size: 14px;
     font-weight: bold;
 }
-     .section-nhay-so .item-so .wrap {
+.section-nhay-so .item-so .wrap {
     margin: auto;
     border: 4px solid #f48121;
     border-radius: 50%;
-    /* overflow: hidden; */
+    overflow: hidden;
     height: 165px;
     width: 165px;
 }
