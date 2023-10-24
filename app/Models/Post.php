@@ -33,4 +33,12 @@ class Post extends Model
     public static function getContentPost($slug) {
         return self::where('slug','=', $slug)->first();
     }
+
+    public static function getAllPostByPostCategory($post_cate_id) {
+        return self::where('post_cate_id', $post_cate_id)->cursorPaginate(10);
+    }
+
+    public static function relatedPost($post_cate_id, $post_id) {
+        return self::where([['post_cate_id', $post_cate_id], ['id', '!=', $post_id]])->limit(3)->get();
+    }
 }
