@@ -27,14 +27,14 @@ Route::get('/du-an', function () {
     return view('public.pages.projects');
 })->name('projects_page');
 
+Route::get('/lien-he', function () {
+    return view('public.pages.contact');
+})->name('contact_page');
+
 Route::get(
     '/chuyen-muc/{slug}',
     [FontendController::class, 'getPostWithCategory']
 )->name('public.post');
-
-Route::get('/lien-he', function () {
-    return view('public.pages.contact');
-})->name('contact_page');
 
 Route::get(
     '/bai-viet/{slug}',
