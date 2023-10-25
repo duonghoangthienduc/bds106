@@ -22,23 +22,28 @@ class Post extends Model
         'post_cate_id',
     ];
 
-    public function getPostCate() {
-        return $this->belongsTo(PostCategory::class, 'post_cate_id','id');
+    public function getPostCate()
+    {
+        return $this->belongsTo(PostCategory::class, 'post_cate_id', 'id');
     }
 
-    public static function getTablePost() {
+    public static function getTablePost()
+    {
         return self::all();
     }
 
-    public static function getContentPost($slug) {
-        return self::where('slug','=', $slug)->first();
+    public static function getContentPost($slug)
+    {
+        return self::where([['slug', $slug], ['is_active', 1]])->first();
     }
 
-    public static function getAllPostByPostCategory($post_cate_id) {
+    public static function getAllPostByPostCategory($post_cate_id)
+    {
         return self::where('post_cate_id', $post_cate_id)->cursorPaginate(10);
     }
 
-    public static function relatedPost($post_cate_id, $post_id) {
-        return self::where([['post_cate_id', $post_cate_id], ['id', '!=', $post_id]])->limit(3)->get();
+    public static function relatedPost($post_cate_id, $post_id)
+    {
+        return self::where([['post_cate_id', $post_cate_id], ['is_active', 1], ['id', '!=', $post_id]])->limit(3)->get();
     }
 }

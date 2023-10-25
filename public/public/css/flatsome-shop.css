@@ -1605,7 +1605,7 @@ tr.shipping span.amount {
 
 .nav-dropdown .product_list_widget {
     overflow-y: auto;
-    /* -webkit-overflow-scrolling: touch; */
+    -webkit-overflow-scrolling: touch;
     max-height: 500px;
     max-height: 50vh
 }

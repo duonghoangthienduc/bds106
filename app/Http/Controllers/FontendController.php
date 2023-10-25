@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Banner;
 use App\Models\Post;
 use App\Models\PostCategory;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class FontendController extends Controller
@@ -47,5 +48,44 @@ class FontendController extends Controller
 
         $relatedPosts = Post::relatedPost($post->post_cate_id, $post->id);
         return view('public.pages.detail-blog', compact('post', 'relatedPosts'));
+    }
+
+    public function getProjectView()
+    {
+        $projects = Project::getAll();
+        return view('public.pages.projects', compact('projects'));
+    }
+
+    public function projectDetail(Request $request) {
+        $project = Project::getProjectBySlug($request->slug);
+
+        if (!$project) {
+            return redirect()->back();
+        }
+
+        return view('public.pages.detail-project', compact('project'));
+    }
+
+    public function projectOrderBy(Request $request) {
+        $orderBy = $request->orderby;
+        if (!$orderBy) {
+            return redirect()->back();
+        }
+        if ($orderBy == 'menu_order') {
+            $projects = Project::getAll();
+            return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
+        }
+        if ($orderBy == 'date') {
+            $projects = Project::getProjectOrderByDate();
+            return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
+        }
+        if ($orderBy == 'price') {
+            $projects = Project::getProjectOrderByPrice();
+            return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
+        }
+        if ($orderBy == 'price-desc') {
+            $projects = Project::getProjectOrderByPrice('desc');
+            return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
+        }
     }
 }

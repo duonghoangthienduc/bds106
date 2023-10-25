@@ -79,7 +79,7 @@ class PostController extends Controller
             $file = $request->input('img_category');
             $status = removeImage($file);
             if ($status) {
-                $path = storeImage($request->file('thumb'), 'banner');
+                $path = storeImage($request->file('thumb'));
                 $newFile = str_replace("public/", "/storage/", $path);
                 $updateStatus = $post->update([
                     'name_post' => $request->name_post,
@@ -119,6 +119,9 @@ class PostController extends Controller
     {
         if ($request->ajax()) {
             $data = Post::where('id', $request->id)->first();
+            if (!$data) {
+                return response()->json(['err' => true, 'msg'=> 'Có lỗi xảy ra']);
+            }
             $file = $data->thumb;
             $status = removeImage($file);
             if ($status) {

@@ -70,14 +70,14 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-box"></i>
                         <p>
-                            Sản phẩm (Product)
+                            Sản phẩm (Project)
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a 
-                            {{-- href="{{ route('Add Product') }}"  --}}
+                            href="{{ route('project.add') }}" 
                             class="nav-link">
                                 <i class="nav-icon far fa-circle nav-icon"></i>
                                 <p>Thêm sản phẩm</p>
@@ -85,7 +85,7 @@
                         </li>
                         <li class="nav-item">
                             <a 
-                            {{-- href="{{ route('List Product') }}"  --}}
+                            href="{{ route('project.list') }}" 
                             class="nav-link">
                                 <i class="nav-icon far fa-circle nav-icon"></i>
                                 <p>Danh sách sản phẩm</p>
