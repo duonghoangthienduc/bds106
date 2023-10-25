@@ -13,7 +13,12 @@ class FontendController extends Controller
     public function getHomeView()
     {
         $banner = Banner::getAll();
-        return view('public.index', ['banner' => $banner]);
+        $projects = Project::getHomePageView();
+        $post = Post::where([['post_cate_id', 1], ['is_active', 1]]);
+        $getNews = $post->limit(3)->get();
+        $listNews = $post->limit(8)->get();
+        $recruitment = Post::where([['post_cate_id', 2], ['is_active', 1]])->limit(4)->get();
+        return view('public.index', compact('banner', 'projects', 'getNews', 'listNews', 'recruitment'));
     }
 
     public function getPostWithCategory(Request $request)
