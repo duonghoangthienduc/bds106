@@ -65,4 +65,27 @@ class FontendController extends Controller
 
         return view('public.pages.detail-project', compact('project'));
     }
+
+    public function projectOrderBy(Request $request) {
+        $orderBy = $request->orderby;
+        if (!$orderBy) {
+            return redirect()->back();
+        }
+        if ($orderBy == 'menu_order') {
+            $projects = Project::getAll();
+            return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
+        }
+        if ($orderBy == 'date') {
+            $projects = Project::getProjectOrderByDate();
+            return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
+        }
+        if ($orderBy == 'price') {
+            $projects = Project::getProjectOrderByPrice();
+            return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
+        }
+        if ($orderBy == 'price-desc') {
+            $projects = Project::getProjectOrderByPrice('desc');
+            return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
+        }
+    }
 }

@@ -8,10 +8,9 @@
                     <div class="col-inner text-center">
                         <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_413932140">
                             <div class="img-inner dark">
-                                <img width="512" height="169"
-                                    src="{{asset('public/imgs/logo.jpg')}}"
+                                <img width="512" height="169" src="{{ asset('public/imgs/logo.jpg') }}"
                                     class="attachment-large size-large" alt="" loading="lazy"
-                                    srcset="{{asset('public/imgs/logo.jpg')}} 512w, {{asset('public/imgs/logo.jpg')}} 510w"
+                                    srcset="{{ asset('public/imgs/logo.jpg') }} 512w, {{ asset('public/imgs/logo.jpg') }} 510w"
                                     sizes="(max-width: 512px) 100vw, 512px" />
                             </div>
                             <style>
@@ -61,7 +60,7 @@
             }
 
             #section_759833939 .section-bg.bg-loaded {
-                background-image: url({{asset('public/imgs/bg-footer.jpg')}});
+                background-image: url({{ asset('public/imgs/bg-footer.jpg') }});
             }
         </style>
     </section>
@@ -74,5 +73,25 @@
         </div>
     </div>
     <a href="#top" class="back-to-top button icon invert plain fixed bottom z-1 is-outline hide-for-medium circle"
-        id="top-link" aria-label="Go to top"><i class="icon-angle-up"></i></a>
+        id="top-link" aria-label="Go to top"><i class="arrow up"></i></a>
+    <style>
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        a#top-link:hover .arrow {
+            border: solid #fff;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+    </style>
 </footer>

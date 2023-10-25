@@ -30,16 +30,14 @@ Route::get(
 )->name('projects_page');
 
 Route::get(
-    '/du-an/{slug}', 
+    '/du-an/orderby',
+    [FontendController::class, 'projectOrderBy']
+)->name('orderby_project');
+
+Route::get(
+    '/du-an/{slug}',
     [FontendController::class, 'projectDetail']
 )->name('project_detail');
-
-// Route::get(
-//     '/du-an/chi-tiet',
-//     function () {
-//         return view('public.pages.detail-project');
-//     }
-// )->name('project_detail');
 
 Route::get('/lien-he', function () {
     return view('public.pages.contact');

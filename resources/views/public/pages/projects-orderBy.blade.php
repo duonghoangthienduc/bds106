@@ -25,12 +25,12 @@
                 <p class="hide-for-medium" style="margin: 0 10px">
                     Hiển thị tất cả {{ count($projects) }} kết quả
                 </p>
-                <form class="woocommerce-ordering" method="get" action="{{route('orderby_project')}}">
+                <form class="woocommerce-ordering" action="{{route('orderby_project')}}" method="get">
                     <select name="orderby" class="orderby" aria-label="Đơn hàng của cửa hàng">
-                        <option value="menu_order" selected='selected'>Thứ tự mặc định</option>
-                        <option value="date">Mới nhất</option>
-                        <option value="price">Thứ tự theo giá: thấp đến cao</option>
-                        <option value="price-desc">Thứ tự theo giá: cao xuống thấp</option>
+                        <option value="menu_order" @if($orderBy == 'menu_order') selected @endif>Thứ tự mặc định</option>
+                        <option value="date" @if($orderBy == 'date') selected @endif>Mới nhất</option>
+                        <option value="price" @if($orderBy == 'price') selected @endif>Thứ tự theo giá: thấp đến cao</option>
+                        <option value="price-desc" @if($orderBy == 'price-desc') selected @endif>Thứ tự theo giá: cao xuống thấp</option>
                     </select>
                 </form>
             </div>
@@ -82,13 +82,12 @@
                             </div>
                         @empty
                         @endforelse
-                        {{ $projects->links('pagination::simple-default') }}
+                        
                     </div><!-- row -->
                 </div><!-- shop container -->
             </div>
-
             @include('public.patrials.downloadItem')
         </div>
-
+        {{ $projects->appends($_GET)->links('pagination::simple-default') }}
     </main>
 @endsection

@@ -28,15 +28,28 @@ class Project extends Model
         'is_active',
     ];
 
-    public static function getTableProject() {
+    public static function getTableProject()
+    {
         return self::all();
     }
 
-    public static function getAll() {
-        return self::where('is_active', 1)->orderBy('id','desc')->paginate(6);
+    public static function getAll()
+    {
+        return self::where('is_active', 1)->orderBy('id', 'asc')->paginate(6);
     }
 
-    public static function getProjectBySlug($slug) {
-        return self::where('slug', $slug)->first();
+    public static function getProjectBySlug($slug)
+    {
+        return self::where([['slug', $slug], ['is_active', 1]])->first();
+    }
+
+    public static function getProjectOrderByDate()
+    {
+        return self::where('is_active', 1)->orderBy('created_at', 'desc')->paginate(6);
+    }
+
+    public static function getProjectOrderByPrice($order = 'asc')
+    {
+        return self::where('is_active', 1)->orderBy('value', $order)->paginate(6);
     }
 }
