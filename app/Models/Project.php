@@ -38,6 +38,11 @@ class Project extends Model
         return self::where('is_active', 1)->orderBy('id', 'asc')->paginate(6);
     }
 
+    public static function getHomePageView()
+    {
+        return self::where('is_active', 1)->orderBy('id', 'asc')->limit(6)->get();
+    }
+
     public static function getProjectBySlug($slug)
     {
         return self::where([['slug', $slug], ['is_active', 1]])->first();
