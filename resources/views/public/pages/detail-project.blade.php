@@ -27,16 +27,16 @@
                                             <figure
                                                 class="woocommerce-product-gallery__wrapper product-gallery-slider slider slider-nav-small mb-half"
                                                 data-flickity-options='{
-                "cellAlign": "center",
-                "wrapAround": true,
-                "autoPlay": false,
-                "prevNextButtons":true,
-                "adaptiveHeight": true,
-                "imagesLoaded": true,
-                "lazyLoad": 1,
-                "dragThreshold" : 15,
-                "pageDots": false,
-                "rightToLeft": false       }'>
+                                                    "cellAlign": "center",
+                                                    "wrapAround": true,
+                                                    "autoPlay": false,
+                                                    "prevNextButtons":true,
+                                                    "adaptiveHeight": true,
+                                                    "imagesLoaded": true,
+                                                    "lazyLoad": 1,
+                                                    "dragThreshold" : 15,
+                                                    "pageDots": false,
+                                                    "rightToLeft": false}'>
                                                 <div data-thumb="{{ $project->thumb }}"
                                                     class="woocommerce-product-gallery__image slide first">
                                                     <a href="{{ $project->thumb }}">
