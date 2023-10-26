@@ -21,6 +21,10 @@ class FontendController extends Controller
         return view('public.index', compact('banner', 'projects', 'getNews', 'listNews', 'recruitment'));
     }
 
+    const TYPE_ORTHER = "khac";
+    const TYPE_NEWS = "tin-tuc";
+    const TYPE_RECRUITMENT = "tuyen-dung";
+
     public function getPostWithCategory(Request $request)
     {
         $cateId = PostCategory::getPostCategoryBySlug($request->slug);
@@ -31,13 +35,14 @@ class FontendController extends Controller
 
         $posts = Post::getAllPostByPostCategory($cateId->id);
         $tilte = "";
-        if ($request->slug == "khac") {
+        
+        if ($request->slug == FontendController::TYPE_ORTHER) {
             $tilte = 'Lĩnh vực hoạt động';
         }
-        if ($request->slug == "tin-tuc") {
+        if ($request->slug == FontendController::TYPE_NEWS) {
             $tilte = 'Tin tức';
         }
-        if ($request->slug == "tuyen-dung") {
+        if ($request->slug == FontendController::TYPE_RECRUITMENT) {
             $tilte = 'Tuyển dụng';
         }
         return view('public.pages.blog', compact('posts', 'tilte'));
@@ -71,24 +76,29 @@ class FontendController extends Controller
         return view('public.pages.detail-project', compact('project'));
     }
 
+    const ORDER_BY = 'menu_order';
+    const ORDER_DATE = 'date';
+    const ORDER_LOW_PRICE = 'price';
+    const ORDER_HIGH_PRICE = 'price-desc';
+
     public function projectOrderBy(Request $request) {
         $orderBy = $request->orderby;
         if (!$orderBy) {
             return redirect()->back();
         }
-        if ($orderBy == 'menu_order') {
+        if ($orderBy == FontendController::ORDER_BY) {
             $projects = Project::getAll();
             return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
         }
-        if ($orderBy == 'date') {
+        if ($orderBy == FontendController::ORDER_DATE) {
             $projects = Project::getProjectOrderByDate();
             return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
         }
-        if ($orderBy == 'price') {
+        if ($orderBy == FontendController::ORDER_LOW_PRICE) {
             $projects = Project::getProjectOrderByPrice();
             return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
         }
-        if ($orderBy == 'price-desc') {
+        if ($orderBy == FontendController::ORDER_HIGH_PRICE) {
             $projects = Project::getProjectOrderByPrice('desc');
             return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
         }

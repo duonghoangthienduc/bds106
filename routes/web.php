@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\FontendController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
@@ -52,7 +54,8 @@ Route::get(
     '/bai-viet/{slug}',
     [FontendController::class, 'getPostView']
 )->name('public.post_detail');
-;
+
+Route::post('/customer/store', [AjaxController::class, 'storeCustomer'])->name('ajax.store-customer');
 
 Route::middleware(['user.hasLogin'])->group(function () {
     Route::get('/login', [LoginController::class, 'index'])->name('admin.login');
@@ -148,6 +151,26 @@ Route::middleware(['user.role'])->group(function () {
                         '/',
                         [ProjectController::class, 'index']
                     )->name('project.list');
+                }
+            );
+            Route::prefix('/customer')->group(
+                function () {
+                    Route::get(
+                        'update/{customer}/edit',
+                        [CustomerController::class, 'edit']
+                    )->name('customer.update');
+                    Route::put(
+                        'update/{customer}/edit',
+                        [CustomerController::class, 'update']
+                    );
+                    Route::delete(
+                        'remove',
+                        [CustomerController::class, 'destroy']
+                    )->name('customer.delete');
+                    Route::get(
+                        '/',
+                        [CustomerController::class, 'index']
+                    )->name('customer.list');
                 }
             );
         }
