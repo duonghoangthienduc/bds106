@@ -39,7 +39,7 @@ class Post extends Model
 
     public static function getAllPostByPostCategory($post_cate_id)
     {
-        return self::where('post_cate_id', $post_cate_id)->cursorPaginate(10);
+        return self::where([['post_cate_id', $post_cate_id], ['is_active', 1]])->cursorPaginate(10);
     }
 
     public static function relatedPost($post_cate_id, $post_id)

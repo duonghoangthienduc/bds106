@@ -29,13 +29,13 @@
                             <div class="clearfix"></div>
                             <p>
                                 <span class="wpcf7-form-control-wrap your-phone">
-                                    <input type="tel" name="your-phone" value="" size="40"
+                                    <input type="tel" name="phone" value="" size="40"
                                         class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel"
                                         aria-required="true" aria-invalid="false"
                                         placeholder="Nhập số điện thoại của bạn">
                                 </span><br>
                                 <span class="wpcf7-form-control-wrap your-email">
-                                    <input type="email" name="your-email" value="" size="40"
+                                    <input type="email" name="email" value="" size="40"
                                         class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
                                         aria-required="true" aria-invalid="false" placeholder="Nhập email của bạn">
                                 </span><br>
@@ -51,7 +51,7 @@
                                         aria-invalid="false">
                                 </span><br> --}}
                                 <input type="submit" value="Tải tài liệu" class="wpcf7-form-control wpcf7-submit">
-                                <span class="ajax-loader"></span>
+                                {{-- <span class="ajax-loader"></span> --}}
                             </p>
                         </div>
                         <div class="wpcf7-response-output" aria-hidden="true"></div>

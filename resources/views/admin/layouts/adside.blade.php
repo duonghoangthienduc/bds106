@@ -150,7 +150,7 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a 
-                            {{-- href="{{ route('List Bill') }}"  --}}
+                            href="{{ route('setting.list') }}" 
                             class="nav-link">
                                 <i class="nav-icon far fa-circle nav-icon"></i>
                                 <p>Cài đặt chung</p>

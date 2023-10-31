@@ -7,6 +7,7 @@ use App\Http\Controllers\FontendController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -173,6 +174,12 @@ Route::middleware(['user.role'])->group(function () {
                     )->name('customer.list');
                 }
             );
+            Route::prefix('/setting')->group(function () {
+                Route::get(
+                    '/',
+                    [SettingController::class, 'index']
+                )->name('setting.list');
+            });
         }
     );
 });

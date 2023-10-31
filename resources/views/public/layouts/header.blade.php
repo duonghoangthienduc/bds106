@@ -2,11 +2,10 @@
     <div class="header-wrapper">
         <div id="masthead" class="header-main ">
             <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
-
                 <!-- Logo -->
                 <div id="logo" class="flex-col logo">
                     <!-- Header logo -->
-                    <a href="#" title="Bất Động Sản 106" rel="home">
+                    <a href="{{route('home_page')}}" title="Bất Động Sản 106" rel="home">
                         <img width="255" height="95" src="{{ asset('public/imgs/logo.jpg') }}"
                             class="header_logo header-logo" alt="Bất Động Sản 106" /><img width="255" height="95"
                             src="{{ asset('public/imgs/logo2.jpg') }}" class="header-logo-dark"
@@ -20,7 +19,22 @@
                             <a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay"
                                 data-color="" class="is-small" aria-label="Menu" aria-controls="main-menu"
                                 aria-expanded="false">
-                                <i class="icon-menu"></i>
+                                <i>
+                                    <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </i>
+                                <style>
+                                    .bar1,
+                                    .bar2,
+                                    .bar3 {
+                                        width: 35px;
+                                        height: 3px;
+                                        background-color: #333;
+                                        margin: 6px 0;
+                                        transition: 0.4s;
+                                    }
+                                </style>
                             </a>
                         </li>
                     </ul>
@@ -28,7 +42,8 @@
 
                 <!-- Left Elements -->
                 <div class="flex-col hide-for-medium flex-left flex-grow">
-                    <ul class="header-nav header-nav-main nav nav-left  nav-size-medium nav-spacing-xlarge nav-uppercase">
+                    <ul
+                        class="header-nav header-nav-main nav nav-left  nav-size-medium nav-spacing-xlarge nav-uppercase">
                     </ul>
                 </div>
 

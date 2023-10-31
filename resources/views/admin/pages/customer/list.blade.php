@@ -14,7 +14,7 @@
                         <th>Tên khách hàng</th>
                         <th>SĐT</th>
                         <th>Email</th>
-                        <th>Tình trạng</th>
+                        <th>Ghi chú</th>
                         {{-- <th>Chỉnh sửa</th> --}}
                     </tr>
                 </thead>
