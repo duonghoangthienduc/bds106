@@ -5,11 +5,11 @@
                 <!-- Logo -->
                 <div id="logo" class="flex-col logo">
                     <!-- Header logo -->
-                    <a href="{{route('home_page')}}" title="Bất Động Sản 106" rel="home">
-                        <img width="255" height="95" src="{{ asset('public/imgs/logo.jpg') }}"
-                            class="header_logo header-logo" alt="Bất Động Sản 106" /><img width="255" height="95"
-                            src="{{ asset('public/imgs/logo2.jpg') }}" class="header-logo-dark"
-                            alt="Bất Động Sản 106" /></a>
+                    <a href="{{route('home_page')}}" title="Liên đoàn Quần vợt tỉnh Khánh Hoà" rel="home" style="width: 65%">
+                        <img width="255" height="95" src="{{ asset('public/imgs/logoKTF.jpg') }}"
+                            class="header_logo header-logo" alt="KTF" />
+                        <img width="255" height="95" src="{{  asset('public/imgs/logoKTF.jpg') }}" 
+                            class="header-logo-dark" alt="KTF" /></a>
                 </div>
 
                 <!-- Mobile Left Elements -->
@@ -57,31 +57,79 @@
                         </li>
                         <li id="menu-item-243"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243 menu-item-design-default">
-                            <a href="{{ route('introduce_page') }}" class="nav-top-link">Giới thiệu</a>
+                            <a href="#" class="nav-top-link">Giới thiệu </a><i class="arrow down" style="margin: 2px 4px;"></i>
+                            <ul class="sub-menu" style="width: 160px;">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-design-default">
+                                    <a  href="#" class="nav-top-link">Về KTF</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-design-default">
+                                    <a href="{{ route('introduce_page') }}" class="nav-top-link">Cơ cấu tổ chức</a>
+                                </li>
+                            </ul>
                         </li>
                         <li id="menu-item-53"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53 menu-item-design-default">
-                            <a href="{{ route('projects_page') }}" class="nav-top-link">Dự án</a>
+                            <a href="{{ route('public.post', 'tin-tuc') }}" class="nav-top-link">Tin tức</a>
                         </li>
                         <li id="menu-item-413"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-413 menu-item-design-default">
-                            <a href="{{ route('public.post', 'khac') }}" class="nav-top-link">Lĩnh vực hoạt động</a>
+                            <a href="#" class="nav-top-link">Hội viên</a>
                         </li>
                         <li id="menu-item-415"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-415 menu-item-design-default">
-                            <a href="{{ route('public.post', 'tuyen-dung') }}" class="nav-top-link">Tuyển dụng</a>
+                            <a href="#" class="nav-top-link">Giải đấu</a>
                         </li>
                         <li id="menu-item-244"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244 menu-item-design-default">
-                            <a href="{{ route('contact_page') }}" class="nav-top-link">Liên hệ</a>
+                            <a href="#" class="nav-top-link">Hình ảnh & Video</a><i class="arrow down" style="margin: 2px 4px;"></i>
+                            <ul class="sub-menu" style="width: 160px;">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-design-default">
+                                    <a  href="{{ route('public.post', 'hinh-anh') }}" class="nav-top-link">Hình ảnh</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-design-default">
+                                    <a href="{{ route('public.post', 'video') }}" class="nav-top-link">Video</a>
+                                </li>
+                            </ul>
                         </li>
                         <li id="menu-item-245"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-245 menu-item-design-default">
-                            <a href="{{ route('public.post', 'tin-tuc') }}" lass="nav-top-link">Tin tức</a>
+                            <a href="{{ route('contact_page') }}" class="nav-top-link">Liên hệ</a>
                         </li>
                     </ul>
                 </div>
-
+                <style>
+                    .sub-menu {
+                        display: none;
+                        box-shadow: 2px 4px #caabab81;
+                        position: absolute;
+                        left: 0;
+                        background-color: #ffffff;
+                        z-index: 1;
+                        overflow: hidden;
+                        font-weight: 700;
+                        font-size: .9em;
+                        text-transform: uppercase;
+                    }
+                    .sub-menu li {
+                        padding: 6px 12px;
+                    }
+                    .sub-menu li>a {
+                        display: block;
+                    }
+                    #menu-item-243:hover ul.sub-menu{
+                        display: block !important;
+                    }
+                    #menu-item-244:hover ul.sub-menu{
+                        display: block !important;
+                    }
+                    li a {
+                        color: rgba(102, 102, 102, .85);
+                    }
+                    .down {
+                        transform: rotate(45deg);
+                        -webkit-transform: rotate(45deg);
+                    }
+                </style>
                 <!-- Mobile Right Elements -->
                 {{-- <div class="flex-col show-for-medium flex-right">
                     <ul class="mobile-nav nav nav-right ">

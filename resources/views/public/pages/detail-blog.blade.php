@@ -1,6 +1,6 @@
 @extends('public.layout')
 @section('head-title')
-    Bất Động Sản 106 - {{ $post->name_post }}
+Liên đoàn Quần vợt tỉnh Khánh Hoà - {{ $post->name_post }}
 @endsection
 @section('content')
     <main id="main" class="">

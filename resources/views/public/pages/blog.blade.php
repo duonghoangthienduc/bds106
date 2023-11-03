@@ -1,6 +1,6 @@
 @extends('public.layout')
 @section('head-title')
-    {{ $tilte }} - Bất Động Sản 106
+Liên đoàn Quần vợt tỉnh Khánh Hoà - {{ $tilte }}
 @endsection
 @section('content')
     <main id="main" class="">

@@ -100,22 +100,61 @@
                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-41 current_page_item menu-item-50">
                  <a href="{{ route('home_page') }}" aria-current="page">Trang chủ</a>
              </li>
-             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243"><a
-                     href="{{ route('introduce_page') }}">Giới thiệu</a></li>
-             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a
-                     href="{{ route('projects_page') }}">Dự án</a></li>
-             <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-413"><a
-                     href="{{ route('public.post', 'khac') }}">Lĩnh vực hoạt động</a></li>
+             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243 ">
+                 <a class="have-sub-side-243" href="#" style="align-items: baseline">Giới thiệu
+                     <i class="arrow down" style="margin: 0px 4px;"></i>
+                 </a>
+                 <ul class="nav nav-sidebar nav-vertical nav-uppercase sub-sidebar-243 disable">
+                     <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                         <a href="#" style="color: rgba(102, 102, 102, .85);">
+                             Về KTF
+                         </a>
+                     </li>
+                     <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                         <a href="{{ route('introduce_page') }}" style="color: rgba(102, 102, 102, .85);">
+                             Cơ cấu tổ chức
+                         </a>
+                     </li>
+                 </ul>
+             </li>
+             <style>
+                 .sub-sidebar li {
+                     padding: 8px 4px;
+                 }
+
+                 .disable {
+                     display: none;
+                 }
+             </style>
+             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53">
+                 <a href="{{ route('public.post', 'tin-tuc') }}">Tin tức</a>
+             </li>
+             <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-413"><a href="#">
+                    Hội viên</a></li>
              <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-415"><a
-                     href="{{ route('public.post', 'tuyen-dung') }}">Tuyển dụng</a></li>
+                     href="#">Giải đấu</a></li>
              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a
-                     href="{{ route('contact_page') }}">Liên hệ</a></li>
+                     href="#" class="have-sub-side-244" style="align-items: baseline">Hình ảnh & Video
+                     <i class="arrow down" style="margin: 0px 4px;"></i></a>
+                     <ul class="nav nav-sidebar nav-vertical nav-uppercase sub-sidebar-244 disable">
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="{{ route('public.post', 'hinh-anh') }}" style="color: rgba(102, 102, 102, .85);">
+                                Hình ảnh
+                            </a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="{{ route('public.post', 'video') }}" style="color: rgba(102, 102, 102, .85);">
+                                Video
+                            </a>
+                        </li>
+                    </ul>
+            </li>
              <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-245"><a
-                     href="{{ route('public.post', 'tin-tuc') }}">Tin tức</a></li>
+                     href="{{ route('contact_page') }}">Liên hệ</a></li>
          </ul>
      </div>
  </div>
- <div id="login-form-popup" class="lightbox-content mfp-hide">
+ {{-- <div id="login-form-popup" class="lightbox-content mfp-hide">
      <div class="woocommerce-notices-wrapper"></div>
      <div class="account-container lightbox-inner">
          <div class="account-login-inner">
@@ -145,12 +184,12 @@
                          name="login" value="Đăng nhập">Đăng nhập</button>
                  </p>
                  <p class="woocommerce-LostPassword lost_password">
-                     {{-- <a href="http://batdongsan106.webdaitin.biz/lost-password/">Quên mật khẩu?</a> --}}
+                     <a href="http://batdongsan106.webdaitin.biz/lost-password/">Quên mật khẩu?</a>
                  </p>
              </form>
          </div>
      </div>
- </div>
+ </div> --}}
  <script type="text/javascript">
      (function() {
          var c = document.body.className;
@@ -401,3 +440,19 @@
  </script>
  <script type='text/javascript' {{-- src='http://batdongsan106.webdaitin.biz/wp-content/plugins/woocommerce/assets/js/frontend/password-strength-meter.min.js?ver=5.5.2' --}} src="{{ asset('public/js/password-strength-meter.min.js') }}"
      id='wc-password-strength-meter-js'></script>
+ <script>
+     jQuery('.have-sub-side-243').click(function(e) {
+         e.preventDefault();
+         if (jQuery('.sub-sidebar-243').hasClass('disable')) {
+             jQuery('.sub-sidebar-243').removeClass('disable')
+         } else
+             jQuery('.sub-sidebar-243').addClass('disable')
+     })
+     jQuery('.have-sub-side-244').click(function(e) {
+         e.preventDefault();
+         if (jQuery('.sub-sidebar-244').hasClass('disable')) {
+             jQuery('.sub-sidebar-244').removeClass('disable')
+         } else
+             jQuery('.sub-sidebar-244').addClass('disable')
+     })
+ </script>

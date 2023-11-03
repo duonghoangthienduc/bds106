@@ -18,7 +18,5 @@ href="{{asset('admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
 {{-- href="/admin/dist/css/adminlte.min.css" --}}
 href="{{asset('admin/dist/css/adminlte.min.css')}}">
 
-<script 
-{{-- src="/admin/lib/ckeditor/ckeditor.js" --}}
-src="{{asset('admin/lib/ckeditor/ckeditor.js')}}"
-></script>
+{{-- <script src="//cdn.ckeditor.com/4.23.0-lts/standard/ckeditor.js"></script> --}}
+

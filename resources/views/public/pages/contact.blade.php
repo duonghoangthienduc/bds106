@@ -1,6 +1,6 @@
 @extends('public.layout')
 @section('head-title')
-Liên hệ - Bất Động Sản 106
+Liên đoàn Quần vợt tỉnh Khánh Hoà - Liên hệ
 @endsection
 @section('content')
     <x-alert/>
@@ -20,7 +20,7 @@ Liên hệ - Bất Động Sản 106
                                     <div id="col-1102438798" class="col small-12 large-12">
                                         <div class="col-inner">
                                             <p><iframe
-                                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7449.622346658035!2d105.8069!3d21.000205!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x14e5c3fdbe0c0ce7!2zQ8O0bmcgVHkgQ1BEViAmIMSQ4buLYSDhu5BjIMSQ4bqldCBYYW5oIE1p4buBbiBC4bqvYw!5e0!3m2!1svi!2sus!4v1552734639196"
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.9675397262404!2d109.18955267432374!3d12.25047593027948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3170678115db0a61%3A0x1d5d9b3ad37f38cf!2zMTAgWWVyc2luLCBW4bqhbiBUaOG6oW5oLCBOaGEgVHJhbmcsIEtow6FuaCBIw7JhIDY1MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1698910654035!5m2!1svi!2s"
                                                     width="100%" height="450" frameborder="0" style="border:0"
                                                     allowfullscreen></iframe></p>
                                         </div>
@@ -29,12 +29,11 @@ Liên hệ - Bất Động Sản 106
                                 <div class="row" id="row-1739863082">
                                     <div id="col-612196328" class="col medium-6 small-12 large-6">
                                         <div class="col-inner">
-                                            <p>Công ty cổ phần dịch vụ và địa ốc Đất Xanh Miền Bắc</p>
-                                            <p>Địa chỉ: Tầng 18, Toà nhà Center Building, Số 1 Nguyễn Huy Tưởng, <br />Quận
-                                                Thanh Xuân, Hà Nội</p>
-                                            <p>MST: 0104794967 &#8211; Ngày cấp: 7/7/2010</p>
-                                            <p>Nơi cấp: Sở Kế hoạch và Đầu tư Thành phố Hà Nội</p>
-                                            <p> </p>
+                                            <p>Liên đoàn Quần vợt tỉnh Khánh Hoà</p>
+                                            <p>Địa chỉ: Số 10 Yersin, phường Xương Huân, TP Nha Trang, tỉnh Khánh Hoà</p>
+                                            <p>Điện thoại: 0258 3841 734</p>
+                                            <p>Email: info@ktf.org.vn</p>
+                                            <p>Website: http://www.ktf.org.vn</p>
                                         </div>
                                     </div>
                                     <div id="col-689241520" class="col medium-6 small-12 large-6">

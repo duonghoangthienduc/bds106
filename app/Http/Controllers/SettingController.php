@@ -32,6 +32,9 @@ class SettingController extends Controller
         //
     }
 
+    public function storeImage(Request $request) {
+        return json_encode( $request->all() );
+    }
     /**
      * Display the specified resource.
      */

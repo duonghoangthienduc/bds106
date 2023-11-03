@@ -1,6 +1,6 @@
 @extends('public.layout')
 @section('head-title')
-    Bất Động Sản 106
+Liên đoàn Quần vợt tỉnh Khánh Hoà
 @endsection
 @section('content')
     <main id="main" class="">
@@ -94,9 +94,9 @@
                 </style>
             </section>
 
-            @component('public.patrials.project')
+            {{-- @component('public.patrials.project')
                 @slot('projects', $projects)
-            @endcomponent
+            @endcomponent --}}
 
             @component('public.patrials.about-us')
                 @slot('getNews', $getNews)

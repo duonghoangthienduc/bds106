@@ -21,7 +21,8 @@ class FontendController extends Controller
         return view('public.index', compact('banner', 'projects', 'getNews', 'listNews', 'recruitment'));
     }
 
-    const TYPE_ORTHER = "khac";
+    const TYPE_IMAGE = "hinh-anh";
+    const TYPE_VIDEO = "video";
     const TYPE_NEWS = "tin-tuc";
     const TYPE_RECRUITMENT = "tuyen-dung";
 
@@ -36,14 +37,14 @@ class FontendController extends Controller
         $posts = Post::getAllPostByPostCategory($cateId->id);
         $tilte = "";
         
-        if ($request->slug == FontendController::TYPE_ORTHER) {
-            $tilte = 'Lĩnh vực hoạt động';
+        if ($request->slug == FontendController::TYPE_IMAGE) {
+            $tilte = 'Hình ảnh';
+        }
+        if ($request->slug == FontendController::TYPE_VIDEO) {
+            $tilte = 'Video';
         }
         if ($request->slug == FontendController::TYPE_NEWS) {
             $tilte = 'Tin tức';
-        }
-        if ($request->slug == FontendController::TYPE_RECRUITMENT) {
-            $tilte = 'Tuyển dụng';
         }
         return view('public.pages.blog', compact('posts', 'tilte'));
     }
@@ -103,4 +104,9 @@ class FontendController extends Controller
             return view('public.pages.projects-orderBy', compact('projects', 'orderBy'));
         }
     }
+
+    public function getListMember() {
+
+    }
+
 }

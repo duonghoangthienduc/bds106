@@ -8,9 +8,9 @@
                     <div class="col-inner text-center">
                         <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_413932140">
                             <div class="img-inner dark">
-                                <img width="512" height="169" src="{{ asset('public/imgs/logo.jpg') }}"
+                                <img width="512" height="169" src="{{ asset('public/imgs/logoKTF.jpg') }}"
                                     class="attachment-large size-large" alt="" loading="lazy"
-                                    srcset="{{ asset('public/imgs/logo.jpg') }} 512w, {{ asset('public/imgs/logo.jpg') }} 510w"
+                                    srcset="{{ asset('public/imgs/logoKTF.jpg') }} 512w, {{ asset('public/imgs/logoKTF.jpg') }} 510w"
                                     sizes="(max-width: 512px) 100vw, 512px" />
                             </div>
                             <style>
@@ -24,22 +24,19 @@
                 <div id="col-1053730113" class="col div-no-padding medium-5 small-12 large-5">
                     <div class="col-inner">
                         <h3 class="title-footer">THÔNG TIN LIÊN HỆ</h3>
-                        <p>Công ty cổ phần dịch vụ và địa ốc Đất Xanh Miền Bắc</p>
-                        <p>Địa chỉ: Tầng 18, Toà nhà Center Building, Số 1 Nguyễn Huy Tưởng, <br />Quận Thanh
-                            Xuân, Hà Nội</p>
-                        <p>MST: 0104794967 - Ngày cấp: 7/7/2010</p>
-                        <p>Nơi cấp: Sở Kế hoạch và Đầu tư Thành phố Hà Nội</p>
-                        <p>Thiết kế web bởi WebDaiTin.vn</p>
+                        <p>Liên đoàn Quần vợt tỉnh Khánh Hoà</p>
+                        <p>Địa chỉ: Số 10 Yersin, phường Xương Huân, TP Nha Trang, tỉnh Khánh Hoà</p>
+                        <p>Điện thoại: 0258 3841 734</p>
+                        <p>Email: info@ktf.org.vn</p>
+                        <p>Website: http://www.ktf.org.vn</p>
                     </div>
                 </div>
                 <div id="col-1251859616" class="col div-no-padding medium-3 small-12 large-3">
                     <div class="col-inner">
                         <h3 class="title-footer">KẾT NỐI VỚI CHÚNG TÔI</h3>
-                        <p>Tel: <a href="tel:+02473038181">02473038181</a> - <a href="tel:+0917612020">0917</a>.xxx.xxx
-                        </p>
-                        <p>Fax: (04) 62688811</p>
-                        <p>Website: www.webdaitin.vn</p>
-                        <div class="social-icons follow-icons" style="font-size:105%"><a href="#" target="_blank"
+                        <p>Tel: <a href="tel:+02583841734">0258 3841 734</a></p>
+                        <p>Website: http://www.ktf.org.vn</p>
+                        {{-- <div class="social-icons follow-icons" style="font-size:105%"><a href="#" target="_blank"
                                 data-label="Facebook" rel="noopener noreferrer nofollow"
                                 class="icon plain facebook tooltip" title="Follow on Facebook"
                                 aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="#"
@@ -48,7 +45,7 @@
                                 aria-label="Follow on Twitter"><i class="icon-twitter"></i></a><a href="#"
                                 target="_blank" rel="noopener noreferrer nofollow" data-label="YouTube"
                                 class="icon plain  youtube tooltip" title="Follow on YouTube"
-                                aria-label="Follow on YouTube"><i class="icon-youtube"></i></a></div>
+                                aria-label="Follow on YouTube"><i class="icon-youtube"></i></a></div> --}}
                     </div>
                 </div>
             </div>

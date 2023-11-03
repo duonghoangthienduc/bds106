@@ -12,4 +12,6 @@
         }
     });
 </script>
+
+<script {{-- src="/admin/lib/ckeditor/ckeditor.js" --}} src="{{ asset('admin/lib/ckeditor/ckeditor.js') }}"></script>
 @yield('scripts')

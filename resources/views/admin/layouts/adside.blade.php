@@ -66,7 +66,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-box"></i>
                         <p>
@@ -92,7 +92,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-book-open"></i>
@@ -120,7 +120,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-person-booth"></i>
                         <p>
@@ -135,6 +135,33 @@
                             class="nav-link">
                                 <i class="nav-icon far fa-circle nav-icon"></i>
                                 <p>Danh sách khách hàng</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li> --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-person-booth"></i>
+                        <p>
+                            Thành viên (Member)
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a 
+                            href="{{ route('member.add') }}" 
+                            class="nav-link">
+                                <i class="nav-icon far fa-circle nav-icon"></i>
+                                <p>Thêm thành viên</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a 
+                            href="{{ route('member.list') }}" 
+                            class="nav-link">
+                                <i class="nav-icon far fa-circle nav-icon"></i>
+                                <p>Danh sách thành viên</p>
                             </a>
                         </li>
                     </ul>

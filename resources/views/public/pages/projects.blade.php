@@ -1,6 +1,6 @@
 @extends('public.layout')
 @section('head-title')
-    Sản phẩm - Bất Động Sản 106
+Liên đoàn Quần vợt tỉnh Khánh Hoà
 @endsection
 @section('content')
     <div class="shop-page-title category-page-title page-title ">

@@ -2,7 +2,7 @@
     <div id="secondary" class="widget-area q2w3-fixed-widget-container" role="complementary" style="height: 344.781px;">
         <aside id="text-3" class="widget widget_text" style="">
             <span class="widget-title ">
-                <span>TẢI TÀI LIỆU</span>
+                <span>ĐĂNG KÝ LÀM HỘI VIÊN</span>
             </span>
             <div class="is-divider small"></div>
             <div class="textwidget">
@@ -23,8 +23,8 @@
                             <input type="hidden" name="_wpcf7_posted_data_hash" value="">
                         </div> --}}
                         <div class="dx_widget_register">
-                            <h5>Tải tài liệu dự án</h5>
-                            <p class="p-khach">Quý khách hàng vui lòng đăng ký để tải tài liệu dự án.</p>
+                            <h5>Tải form đăng ký</h5>
+                            <p class="p-khach">Quý khách vui lòng đăng ký thông tin để tải form.</p>
                             <p><i class="fa fa-download"></i></p>
                             <div class="clearfix"></div>
                             <p>
