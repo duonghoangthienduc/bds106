@@ -17,7 +17,8 @@
                 <div class="row">
                     <div class="form-group col-md-4">
                         <label>ĐƠN GIÁ</label>
-                        <input type="number" min="0" class="form-control" name="price" placeholder="Nhập giá tiền">
+                        <input type="number" min="0" class="form-control" name="price"
+                            placeholder="Nhập giá tiền">
                     </div>
 
                     <div class="form-group col-md-4">
@@ -91,11 +92,53 @@
 
 @section('scripts')
     <script>
-        CKEDITOR.replace('content');
-        CKEDITOR.replace('location');
-        CKEDITOR.replace('convince');
-        CKEDITOR.replace('decor');
-        CKEDITOR.replace('payment');
-        CKEDITOR.replace('place');
+        CKEDITOR.replace('content', {
+            filebrowserBrowseUrl: "{{ route('ckfinder_browser') }}",
+            filebrowserImageBrowseUrl: "{{ route('ckfinder_browser') }}?type=Images&token=123",
+            filebrowserFlashBrowseUrl: "{{ route('ckfinder_browser') }}?type=Flash&token=123",
+            filebrowserUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Files",
+            filebrowserImageUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Images",
+            filebrowserFlashUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Flash",
+        });
+        CKEDITOR.replace('location', {
+            filebrowserBrowseUrl: "{{ route('ckfinder_browser') }}",
+            filebrowserImageBrowseUrl: "{{ route('ckfinder_browser') }}?type=Images&token=123",
+            filebrowserFlashBrowseUrl: "{{ route('ckfinder_browser') }}?type=Flash&token=123",
+            filebrowserUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Files",
+            filebrowserImageUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Images",
+            filebrowserFlashUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Flash",
+        });
+        CKEDITOR.replace('convince', {
+            filebrowserBrowseUrl: "{{ route('ckfinder_browser') }}",
+            filebrowserImageBrowseUrl: "{{ route('ckfinder_browser') }}?type=Images&token=123",
+            filebrowserFlashBrowseUrl: "{{ route('ckfinder_browser') }}?type=Flash&token=123",
+            filebrowserUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Files",
+            filebrowserImageUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Images",
+            filebrowserFlashUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Flash",
+        });
+        CKEDITOR.replace('decor', {
+            filebrowserBrowseUrl: "{{ route('ckfinder_browser') }}",
+            filebrowserImageBrowseUrl: "{{ route('ckfinder_browser') }}?type=Images&token=123",
+            filebrowserFlashBrowseUrl: "{{ route('ckfinder_browser') }}?type=Flash&token=123",
+            filebrowserUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Files",
+            filebrowserImageUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Images",
+            filebrowserFlashUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Flash",
+        });
+        CKEDITOR.replace('payment', {
+            filebrowserBrowseUrl: "{{ route('ckfinder_browser') }}",
+            filebrowserImageBrowseUrl: "{{ route('ckfinder_browser') }}?type=Images&token=123",
+            filebrowserFlashBrowseUrl: "{{ route('ckfinder_browser') }}?type=Flash&token=123",
+            filebrowserUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Files",
+            filebrowserImageUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Images",
+            filebrowserFlashUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Flash",
+        });
+        CKEDITOR.replace('place', {
+            filebrowserBrowseUrl: "{{ route('ckfinder_browser') }}",
+            filebrowserImageBrowseUrl: "{{ route('ckfinder_browser') }}?type=Images&token=123",
+            filebrowserFlashBrowseUrl: "{{ route('ckfinder_browser') }}?type=Flash&token=123",
+            filebrowserUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Files",
+            filebrowserImageUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Images",
+            filebrowserFlashUploadUrl: "{{ route('ckfinder_connector') }}?command=QuickUpload&type=Flash",
+        });
     </script>
 @endsection

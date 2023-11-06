@@ -5,6 +5,8 @@
 <!-- AdminLTE App -->
 <script {{-- src="/admin/dist/js/adminlte.min.js" --}} src="{{ asset('admin/dist/js/adminlte.min.js') }}"></script>
 
+<script src="{{ asset('admin/lib/ckfinder/ckfinder.js') }}"></script>
+
 <script>
     $.ajaxSetup({
         headers: {
