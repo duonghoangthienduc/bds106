@@ -7,9 +7,9 @@
                 <div id="logo" class="flex-col logo">
                     <!-- Header logo -->
                     <a href="#" title="Bất Động Sản 106" rel="home">
-                        <img width="255" height="95" src="{{ asset('public/imgs/logo.jpg') }}"
+                        <img width="255" height="95" src="{{ asset('public/imgs/logo.png') }}"
                             class="header_logo header-logo" alt="Bất Động Sản 106" /><img width="255" height="95"
-                            src="{{ asset('public/imgs/logo2.jpg') }}" class="header-logo-dark"
+                            src="{{ asset('public/imgs/logo.png') }}" class="header-logo-dark"
                             alt="Bất Động Sản 106" /></a>
                 </div>
 
@@ -50,7 +50,7 @@
                         </li>
                         <li id="menu-item-413"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-413 menu-item-design-default">
-                            <a href="{{ route('public.post', 'khac') }}" class="nav-top-link">Lĩnh vực hoạt động</a>
+                            <a href="{{ route('public.post', 'linh-vuc-hoat-dong') }}" class="nav-top-link">Lĩnh vực hoạt động</a>
                         </li>
                         <li id="menu-item-415"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-415 menu-item-design-default">

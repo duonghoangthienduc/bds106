@@ -7,6 +7,7 @@ use App\Http\Controllers\FontendController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,9 +67,9 @@ Route::middleware(['user.role'])->group(function () {
     Route::prefix('/admin')->group(
         function () {
             Route::get('/logout', [LoginController::class, 'logOut'])->name('admin.logout');
-            Route::get('/dashboard', function () {
-                return view('admin.index');
-            })->name('admin.dashboard');
+            Route::get('/', function () {
+                return redirect('admin/setting');
+            });
             Route::prefix('/banner')->group(
                 function () {
                     Route::get(
@@ -173,6 +174,16 @@ Route::middleware(['user.role'])->group(function () {
                     )->name('customer.list');
                 }
             );
+            Route::prefix('/setting')->group(function () {
+                Route::post(
+                    'add',
+                    [SettingController::class, 'store']
+                )->name('setting.store');
+                Route::get(
+                    '/',
+                    [SettingController::class, 'index']
+                )->name('admin.dashboard');
+            });
         }
     );
 });

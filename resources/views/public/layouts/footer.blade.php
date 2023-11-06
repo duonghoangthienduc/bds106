@@ -8,9 +8,9 @@
                     <div class="col-inner text-center">
                         <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_413932140">
                             <div class="img-inner dark">
-                                <img width="512" height="169" src="{{ asset('public/imgs/logo.jpg') }}"
+                                <img width="512" height="169" src="{{ asset('public/imgs/logo.png') }}"
                                     class="attachment-large size-large" alt="" loading="lazy"
-                                    srcset="{{ asset('public/imgs/logo.jpg') }} 512w, {{ asset('public/imgs/logo.jpg') }} 510w"
+                                    srcset="{{ asset('public/imgs/logo.png') }} 512w, {{ asset('public/imgs/logo.png') }} 510w"
                                     sizes="(max-width: 512px) 100vw, 512px" />
                             </div>
                             <style>

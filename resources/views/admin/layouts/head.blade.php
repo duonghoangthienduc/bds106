@@ -8,17 +8,17 @@
 <!-- Font Awesome -->
 <link rel="stylesheet" 
 {{-- href="/admin/plugins/fontawesome-free/css/all.min.css"  --}}
-href="{{asset('admin/plugins/fontawesome-free/css/all.css')}}">
+href="{{asset('adminv1/plugins/fontawesome-free/css/all.css')}}">
 <!-- icheck bootstrap -->
 <link rel="stylesheet" 
 {{-- href="/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css" --}}
-href="{{asset('admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+href="{{asset('adminv1/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
 <!-- Theme style -->
 <link rel="stylesheet" 
 {{-- href="/admin/dist/css/adminlte.min.css" --}}
-href="{{asset('admin/dist/css/adminlte.min.css')}}">
+href="{{asset('adminv1/dist/css/adminlte.min.css')}}">
 
 <script 
 {{-- src="/admin/lib/ckeditor/ckeditor.js" --}}
-src="{{asset('admin/lib/ckeditor/ckeditor.js')}}"
+src="{{asset('adminv1/lib/ckeditor/ckeditor.js')}}"
 ></script>

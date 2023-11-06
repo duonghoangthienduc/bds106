@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="" class="brand-link">
-        <img src="{{asset('admin/dist/img/Logo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+        <img src="{{asset('adminv1/dist/img/Logo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
         <span class="brand-text font-weight-light">BDS 106</span>
     </a>
@@ -8,7 +8,7 @@
         <div class="user-panel">
             <div class="mt-3 d-flex">
                 <div class="image mr-2">
-                    <img src=" {{asset('admin/dist/img/admin.png')}}" class="img-circle elevation-2" alt="User Image">
+                    <img src=" {{asset('adminv1/dist/img/admin.png')}}" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
                     <a href="#" class="d-block">{{ Auth::user()->name ?? " " }}</a>
@@ -150,7 +150,7 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a 
-                            {{-- href="{{ route('List Bill') }}"  --}}
+                            href="{{ route('admin.dashboard') }}" 
                             class="nav-link">
                                 <i class="nav-icon far fa-circle nav-icon"></i>
                                 <p>Cài đặt chung</p>

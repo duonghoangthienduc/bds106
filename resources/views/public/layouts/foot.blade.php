@@ -105,7 +105,7 @@
              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a
                      href="{{ route('projects_page') }}">Dự án</a></li>
              <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-413"><a
-                     href="{{ route('public.post', 'khac') }}">Lĩnh vực hoạt động</a></li>
+                     href="{{ route('public.post', 'linh-vuc-hoat-dong') }}">Lĩnh vực hoạt động</a></li>
              <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-415"><a
                      href="{{ route('public.post', 'tuyen-dung') }}">Tuyển dụng</a></li>
              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a

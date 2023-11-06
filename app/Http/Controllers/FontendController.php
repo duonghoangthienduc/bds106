@@ -21,7 +21,7 @@ class FontendController extends Controller
         return view('public.index', compact('banner', 'projects', 'getNews', 'listNews', 'recruitment'));
     }
 
-    const TYPE_ORTHER = "khac";
+    const TYPE_ORTHER = "linh-vuc-hoat-dong";
     const TYPE_NEWS = "tin-tuc";
     const TYPE_RECRUITMENT = "tuyen-dung";
 
