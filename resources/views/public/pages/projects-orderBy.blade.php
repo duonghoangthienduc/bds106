@@ -11,7 +11,7 @@
                         <span class="divider">&#47;</span> Dự án
                     </nav>
                 </div>
-                <div class="category-filtering category-filter-row show-for-medium">
+                {{-- <div class="category-filtering category-filter-row show-for-medium">
                     <a href="#" data-open="#shop-sidebar" data-visible-after="true" data-pos="left"
                         class="filter-button uppercase plain">
                         <i class="icon-equalizer"></i>
@@ -19,7 +19,7 @@
                     </a>
                     <div class="inline-block">
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="flex-col medium-text-center" style="display:flex; align-items: center;">
                 <p class="hide-for-medium" style="margin: 0 10px">

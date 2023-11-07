@@ -69,38 +69,6 @@
                                             {{ $project->name_project }}
                                         </h1>
                                         <div class="is-divider small"></div>
-                                        {{-- <ul class="next-prev-thumbs is-small show-for-medium">
-                                            <li class="prod-dropdown has-dropdown">
-                                                <a href="http://batdongsan106.webdaitin.biz/khu-do-thi-lien-ke-nam-32/"
-                                                    rel="next" class="button icon is-outline circle">
-                                                    <i class="icon-angle-left"></i> </a>
-                                                <div class="nav-dropdown">
-                                                    <a title="Khu đô thị liền kề nam 32"
-                                                        href="http://batdongsan106.webdaitin.biz/khu-do-thi-lien-ke-nam-32/">
-                                                        <img width="100" height="100"
-                                                            src="http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/02/TONG-QUAN-1366X577-100x100.jpg"
-                                                            class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image"
-                                                            alt="" loading="lazy"
-                                                            srcset="http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/02/TONG-QUAN-1366X577-100x100.jpg 100w, http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/02/TONG-QUAN-1366X577-280x280.jpg 280w"
-                                                            sizes="(max-width: 100px) 100vw, 100px" /></a>
-                                                </div>
-                                            </li>
-                                            <li class="prod-dropdown has-dropdown">
-                                                <a href="http://batdongsan106.webdaitin.biz/biet-thu-thephoenix-garden/"
-                                                    rel="next" class="button icon is-outline circle">
-                                                    <i class="icon-angle-right"></i> </a>
-                                                <div class="nav-dropdown">
-                                                    <a title="Biệt thự Thephoenix Garden"
-                                                        href="http://batdongsan106.webdaitin.biz/biet-thu-thephoenix-garden/">
-                                                        <img width="100" height="100"
-                                                            src="http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/02/banner-phoenix-3-100x100.jpg"
-                                                            class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image"
-                                                            alt="" loading="lazy"
-                                                            srcset="http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/02/banner-phoenix-3-100x100.jpg 100w, http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/02/banner-phoenix-3-280x280.jpg 280w"
-                                                            sizes="(max-width: 100px) 100vw, 100px" /></a>
-                                                </div>
-                                            </li>
-                                        </ul> --}}
                                         <div class="price-wrapper">
                                             <p class="price product-page-price ">
                                             </p>

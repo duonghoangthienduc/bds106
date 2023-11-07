@@ -20,7 +20,22 @@
                             <a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay"
                                 data-color="" class="is-small" aria-label="Menu" aria-controls="main-menu"
                                 aria-expanded="false">
-                                <i class="icon-menu"></i>
+                                <i>
+                                    <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </i>
+                                <style>
+                                    .bar1,
+                                    .bar2,
+                                    .bar3 {
+                                        width: 35px;
+                                        height: 3px;
+                                        background-color: #333;
+                                        margin: 6px 0;
+                                        transition: 0.4s;
+                                    }
+                                </style>
                             </a>
                         </li>
                     </ul>
@@ -28,7 +43,8 @@
 
                 <!-- Left Elements -->
                 <div class="flex-col hide-for-medium flex-left flex-grow">
-                    <ul class="header-nav header-nav-main nav nav-left  nav-size-medium nav-spacing-xlarge nav-uppercase">
+                    <ul
+                        class="header-nav header-nav-main nav nav-left  nav-size-medium nav-spacing-xlarge nav-uppercase">
                     </ul>
                 </div>
 
@@ -50,7 +66,8 @@
                         </li>
                         <li id="menu-item-413"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-413 menu-item-design-default">
-                            <a href="{{ route('public.post', 'linh-vuc-hoat-dong') }}" class="nav-top-link">Lĩnh vực hoạt động</a>
+                            <a href="{{ route('public.post', 'linh-vuc-hoat-dong') }}" class="nav-top-link">Lĩnh vực
+                                hoạt động</a>
                         </li>
                         <li id="menu-item-415"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-415 menu-item-design-default">
