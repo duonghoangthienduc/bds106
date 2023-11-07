@@ -25,12 +25,15 @@
                 <p class="hide-for-medium" style="margin: 0 10px">
                     Hiển thị tất cả {{ count($projects) }} kết quả
                 </p>
-                <form class="woocommerce-ordering" action="{{route('orderby_project')}}" method="get">
+                <form class="woocommerce-ordering" action="{{ route('orderby_project') }}" method="get">
                     <select name="orderby" class="orderby" aria-label="Đơn hàng của cửa hàng">
-                        <option value="menu_order" @if($orderBy == 'menu_order') selected @endif>Thứ tự mặc định</option>
-                        <option value="date" @if($orderBy == 'date') selected @endif>Mới nhất</option>
-                        <option value="price" @if($orderBy == 'price') selected @endif>Thứ tự theo giá: thấp đến cao</option>
-                        <option value="price-desc" @if($orderBy == 'price-desc') selected @endif>Thứ tự theo giá: cao xuống thấp</option>
+                        <option value="menu_order" @if ($orderBy == 'menu_order') selected @endif>Thứ tự mặc định
+                        </option>
+                        <option value="date" @if ($orderBy == 'date') selected @endif>Mới nhất</option>
+                        <option value="price" @if ($orderBy == 'price') selected @endif>Thứ tự theo giá: thấp đến
+                            cao</option>
+                        <option value="price-desc" @if ($orderBy == 'price-desc') selected @endif>Thứ tự theo giá: cao
+                            xuống thấp</option>
                     </select>
                 </form>
             </div>
@@ -51,7 +54,8 @@
                                     <div class="product-small box ">
                                         <div class="box-image">
                                             <div class="image-fade_in_back">
-                                                <a  href="{{route('project_detail', $project->slug)}}" aria-label="{{ $project->name_project }}">
+                                                <a href="{{ route('project_detail', $project->slug) }}"
+                                                    aria-label="{{ $project->name_project }}">
                                                     <img src="{{ $project->thumb }}" style="width:247px; height:296px"
                                                         class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                                         alt="" loading="lazy" /> </a>
@@ -67,11 +71,15 @@
                                         <div class="box-text box-text-products text-center grid-style-2">
                                             <div class="title-wrapper">
                                                 <p class="name product-title woocommerce-loop-product__title"><a
-                                                        href="{{route('project_detail', $project->slug)}}"
+                                                        href="{{ route('project_detail', $project->slug) }}"
                                                         class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                                                         {{ $project->name_project }}</a></p>
                                                 <div class="giatien">
-                                                    <p>Giá từ:<span class="gia-tien"> {{ $project->price }} {{ $project->value == 'ty' ? 'tỷ' : 'triệu' }}/{{ $project->unit == 'can' ? 'căn' : 'm2' }}</span></p>
+                                                    @if ($project->price > 0)
+                                                        <p>Giá từ:<span class="gia-tien"> {{ $project->price }}
+                                                                {{ $project->value == 'ty' ? 'tỷ' : 'triệu' }}/{{ $project->unit == 'can' ? 'căn' : 'm2' }}</span>
+                                                        </p>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="price-wrapper">
@@ -82,12 +90,11 @@
                             </div>
                         @empty
                         @endforelse
-                        
                     </div><!-- row -->
+                    {{ $projects->appends($_GET)->links('pagination::simple-default') }}
                 </div><!-- shop container -->
             </div>
             @include('public.patrials.downloadItem')
         </div>
-        {{ $projects->appends($_GET)->links('pagination::simple-default') }}
     </main>
 @endsection

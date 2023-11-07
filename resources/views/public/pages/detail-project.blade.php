@@ -106,9 +106,11 @@
                                             </p>
                                         </div>
                                         <div class="giatien">
-                                            <p>Giá từ:<span class="gia-tien"> {{ $project->price }}
-                                                    {{ $project->value == 'ty' ? 'tỷ' : 'triệu' }}/{{ $project->unit == 'can' ? 'căn' : 'm2' }}</span>
-                                            </p>
+                                            @if ($project->price > 0)
+                                                <p>Giá từ:<span class="gia-tien"> {{ $project->price }}
+                                                        {{ $project->value == 'ty' ? 'tỷ' : 'triệu' }}/{{ $project->unit == 'can' ? 'căn' : 'm2' }}</span>
+                                                </p>
+                                            @endif
                                         </div>
                                         <div class="product_meta">
                                             <span class="posted_in">Danh mục: <a href="{{ route('projects_page') }}"
@@ -215,7 +217,7 @@
                                                 <h2 class="h2-mo-ta">
                                                     Tổng quan dự án
                                                 </h2>
-                                                {!! htmlspecialchars_decode( $project->content ) !!}
+                                                {!! htmlspecialchars_decode($project->content) !!}
                                                 <div class="nut-scroll">
                                                     <span class="scroll-to" data-label="Scroll to: #vi-tri"
                                                         data-bullet="false" data-link="#vi-tri" data-title="Change this">
@@ -228,20 +230,20 @@
                                                 <h2 class="h2-mo-ta">
                                                     VỊ TRÍ DỰ ÁN
                                                 </h2>
-                                                {!! htmlspecialchars_decode( $project->location ) !!}
-                                                <div class="nut-scroll"> 
-                                                    <span class="scroll-to"
-                                                        data-label="Scroll to: #tien-ich" data-bullet="false"
-                                                        data-link="#tien-ich" data-title="Change this">
+                                                {!! htmlspecialchars_decode($project->location) !!}
+                                                <div class="nut-scroll">
+                                                    <span class="scroll-to" data-label="Scroll to: #tien-ich"
+                                                        data-bullet="false" data-link="#tien-ich"
+                                                        data-title="Change this">
                                                         <a name="tien-ich"></a>
-                                                    </span> 
+                                                    </span>
                                                 </div>
                                             </div>
                                             <div class="div-tien_ich">
                                                 <h2 class="h2-mo-ta">
                                                     TIỆN ÍCH
                                                 </h2>
-                                                {!! htmlspecialchars_decode( $project->convince ) !!}
+                                                {!! htmlspecialchars_decode($project->convince) !!}
                                                 <div class="nut-scroll"> <span class="scroll-to"
                                                         data-label="Scroll to: #noi-that" data-bullet="false"
                                                         data-link="#noi-that" data-title="Change this"><a
@@ -250,9 +252,9 @@
 
                                             <div class="div-tien_ich">
                                                 <h2 class="h2-mo-ta">
-                                                    Nội thất dự án 
+                                                    Nội thất dự án
                                                 </h2>
-                                                {!! htmlspecialchars_decode( $project->decor ) !!}
+                                                {!! htmlspecialchars_decode($project->decor) !!}
                                                 <div class="nut-scroll"> <span class="scroll-to"
                                                         data-label="Scroll to: #tien-do" data-bullet="false"
                                                         data-link="#tien-do" data-title="Change this"><a
@@ -263,21 +265,21 @@
                                                 <h2 class="h2-mo-ta">
                                                     TIẾN ĐỘ
                                                 </h2>
-                                                {!! htmlspecialchars_decode( $project->payment ) !!}
-                                                <div class="nut-scroll"> 
-                                                    <span class="scroll-to"
-                                                        data-label="Scroll to: #mat-bang" data-bullet="false"
-                                                        data-link="#mat-bang" data-title="Change this">
+                                                {!! htmlspecialchars_decode($project->payment) !!}
+                                                <div class="nut-scroll">
+                                                    <span class="scroll-to" data-label="Scroll to: #mat-bang"
+                                                        data-bullet="false" data-link="#mat-bang"
+                                                        data-title="Change this">
                                                         <a name="mat-bang"></a>
-                                                    </span> 
+                                                    </span>
                                                 </div>
                                             </div>
 
                                             <div class="div-tien_ich">
                                                 <h2 class="h2-mo-ta">
-                                                    MẶT BẰNG 
+                                                    MẶT BẰNG
                                                 </h2>
-                                                {!! htmlspecialchars_decode( $project->place ) !!}
+                                                {!! htmlspecialchars_decode($project->place) !!}
                                             </div>
                                         </div>
                                     </div>
@@ -292,101 +294,6 @@
                             }
                         </style>
                     </section>
-                    <div id="product-sidebar" class="mfp-hide">
-                        <div class="sidebar-inner">
-                            <div class="hide-for-off-canvas" style="width:100%">
-                                <ul class="next-prev-thumbs is-small nav-right text-right">
-                                    <li class="prod-dropdown has-dropdown">
-                                        <a href="http://batdongsan106.webdaitin.biz/khu-do-thi-lien-ke-nam-32/"
-                                            rel="next" class="button icon is-outline circle">
-                                            <i class="icon-angle-left"></i> </a>
-                                        <div class="nav-dropdown">
-                                            <a title="Khu đô thị liền kề nam 32"
-                                                href="http://batdongsan106.webdaitin.biz/khu-do-thi-lien-ke-nam-32/">
-                                                <img width="100" height="100"
-                                                    src="http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/02/TONG-QUAN-1366X577-100x100.jpg"
-                                                    class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image"
-                                                    alt="" loading="lazy"
-                                                    srcset="http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/02/TONG-QUAN-1366X577-100x100.jpg 100w, http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/02/TONG-QUAN-1366X577-280x280.jpg 280w"
-                                                    sizes="(max-width: 100px) 100vw, 100px" /></a>
-                                        </div>
-                                    </li>
-                                    <li class="prod-dropdown has-dropdown">
-                                        <a href="http://batdongsan106.webdaitin.biz/biet-thu-thephoenix-garden/"
-                                            rel="next" class="button icon is-outline circle">
-                                            <i class="icon-angle-right"></i> </a>
-                                        <div class="nav-dropdown">
-                                            <a title="Biệt thự Thephoenix Garden"
-                                                href="http://batdongsan106.webdaitin.biz/biet-thu-thephoenix-garden/">
-                                                <img width="100" height="100"
-                                                    src="http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/02/banner-phoenix-3-100x100.jpg"
-                                                    class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image"
-                                                    alt="" loading="lazy"
-                                                    srcset="http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/02/banner-phoenix-3-100x100.jpg 100w, http://batdongsan106.webdaitin.biz/wp-content/uploads/2020/02/banner-phoenix-3-280x280.jpg 280w"
-                                                    sizes="(max-width: 100px) 100vw, 100px" /></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <aside id="text-4" class="widget widget_text"><span class="widget-title shop-sidebar">TẢI
-                                    TÀI LIỆU</span>
-                                <div class="is-divider small"></div>
-                                <div class="textwidget">
-                                    <div role="form" class="wpcf7" id="wpcf7-f156-p408-o2" lang="vi"
-                                        dir="ltr">
-                                        <div class="screen-reader-response">
-                                            <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                            <ul></ul>
-                                        </div>
-                                        <form action="/du-an-duong-kinh-new-city/#wpcf7-f156-p408-o2" method="post"
-                                            class="wpcf7-form init" novalidate="novalidate" data-status="init">
-                                            <div style="display: none;">
-                                                <input type="hidden" name="_wpcf7" value="156" />
-                                                <input type="hidden" name="_wpcf7_version" value="5.4.2" />
-                                                <input type="hidden" name="_wpcf7_locale" value="vi" />
-                                                <input type="hidden" name="_wpcf7_unit_tag"
-                                                    value="wpcf7-f156-p408-o2" />
-                                                <input type="hidden" name="_wpcf7_container_post" value="408" />
-                                                <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                                            </div>
-                                            <div class="dx_widget_register">
-                                                <h5>Tải tài liệu dự án</h5>
-                                                <p class="p-khach">Quý khách hàng vui lòng đăng ký để tải tài liệu dự án.
-                                                </p>
-                                                <p><i class="fa fa-download"></i>
-                                                <div class="clearfix"></div>
-                                                <p><span class="wpcf7-form-control-wrap your-phone"><input type="tel"
-                                                            name="your-phone" value="" size="40"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Nhập số điện thoại của bạn" /></span><br />
-                                                    <span class="wpcf7-form-control-wrap your-email"><input type="email"
-                                                            name="your-email" value="" size="40"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Nhập email của bạn" /></span><br />
-                                                    <span class="wpcf7-form-control-wrap du-an"><input type="hidden"
-                                                            name="du-an" value="Dự án Dương Kinh New City"
-                                                            size="40"
-                                                            class="wpcf7-form-control wpcf7dtx-dynamictext wpcf7-dynamichidden"
-                                                            aria-invalid="false" /></span><br />
-                                                    <span class="wpcf7-form-control-wrap duong-dan"><input type="hidden"
-                                                            name="duong-dan" value="http://batdongsan106.webdaitin.biz"
-                                                            size="40"
-                                                            class="wpcf7-form-control wpcf7dtx-dynamictext wpcf7-dynamichidden"
-                                                            aria-invalid="false" /></span><br />
-                                                    <input type="submit" value="Tải tài liệu"
-                                                        class="wpcf7-form-control wpcf7-submit" />
-                                                </p>
-                                            </div>
-                                            <div class="wpcf7-response-output" aria-hidden="true"></div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
                 </div>
 
 

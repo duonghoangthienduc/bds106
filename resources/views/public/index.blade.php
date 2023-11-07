@@ -11,7 +11,7 @@
                 @slot('banner', $banner)
             @endcomponent
 
-            <section class="section section-nhay-so" id="section_1479736412">
+            {{-- <section class="section section-nhay-so" id="section_1479736412">
                 <div class="bg section-bg fill bg-fill  bg-loaded">
                 </div>
                 <div class="section-content relative">
@@ -92,7 +92,7 @@
                         padding-bottom: 30px;
                     }
                 </style>
-            </section>
+            </section> --}}
 
             @component('public.patrials.project')
                 @slot('projects', $projects)
@@ -102,19 +102,21 @@
                 @slot('getNews', $getNews)
             @endcomponent
 
-            @component('public.patrials.news')
-                @slot('listNews', $listNews)
-            @endcomponent
+            @if (count($listNews) > 0)
+                @component('public.patrials.news')
+                    @slot('listNews', $listNews)
+                @endcomponent
+            @endif
 
-            @include('public.patrials.customer')
+            {{-- @include('public.patrials.customer')
 
             @include('public.patrials.partner')
 
-            @include('public.patrials.prize')
+            @include('public.patrials.prize') --}}
 
-            @component('public.patrials.recruitment')
+            {{-- @component('public.patrials.recruitment')
                 @slot('recruitment', $recruitment)
-            @endcomponent
+            @endcomponent --}}
 
         </div>
     </main>

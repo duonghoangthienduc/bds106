@@ -1,3 +1,9 @@
+@php
+    $config = '';
+    if (Cache::has('CONFIG')) {
+        $config = Cache::get('CONFIG');
+    }
+@endphp
 <footer id="footer" class="footer-wrapper">
     <section class="section" id="section_759833939">
         <div class="bg section-bg fill bg-fill  ">
@@ -24,22 +30,27 @@
                 <div id="col-1053730113" class="col div-no-padding medium-5 small-12 large-5">
                     <div class="col-inner">
                         <h3 class="title-footer">THÔNG TIN LIÊN HỆ</h3>
-                        <p>Công ty cổ phần dịch vụ và địa ốc Đất Xanh Miền Bắc</p>
-                        <p>Địa chỉ: Tầng 18, Toà nhà Center Building, Số 1 Nguyễn Huy Tưởng, <br />Quận Thanh
-                            Xuân, Hà Nội</p>
-                        <p>MST: 0104794967 - Ngày cấp: 7/7/2010</p>
-                        <p>Nơi cấp: Sở Kế hoạch và Đầu tư Thành phố Hà Nội</p>
-                        <p>Thiết kế web bởi WebDaiTin.vn</p>
+                        <p>{{ gettype($config) === 'object' ? $config[0]['name_store'] : '' }}</p>
+                        <p>Địa chỉ: {{ gettype($config) === 'object' ? $config[0]['address'] : '' }}</p>
+                        <p>Điện thoại: <a href="tel:+{{ gettype($config) === 'object' ? $config[0]['phone'] : '' }}">
+                                {{ gettype($config) === 'object' ? $config[0]['phone'] : '' }}</a>
+                        </p>
+                        <p>Fax:
+                            {{ gettype($config) === 'object' ? $config[0]['phone'] : '' }}
+                        </p>
+                        <p>Email: {{ gettype($config) === 'object' ? $config[0]['email'] : '' }}</p>
                     </div>
                 </div>
                 <div id="col-1251859616" class="col div-no-padding medium-3 small-12 large-3">
                     <div class="col-inner">
                         <h3 class="title-footer">KẾT NỐI VỚI CHÚNG TÔI</h3>
-                        <p>Tel: <a href="tel:+02473038181">02473038181</a> - <a href="tel:+0917612020">0917</a>.xxx.xxx
+                        <p>Tel: <a href="tel:+{{ gettype($config) === 'object' ? $config[0]['phone'] : '' }}">
+                                {{ gettype($config) === 'object' ? $config[0]['phone'] : '' }}</a>
                         </p>
-                        <p>Fax: (04) 62688811</p>
-                        <p>Website: www.webdaitin.vn</p>
-                        <div class="social-icons follow-icons" style="font-size:105%"><a href="#" target="_blank"
+                        </p>
+                        <p>Fax: {{ gettype($config) === 'object' ? $config[0]['phone'] : '' }}</p>
+                        <p>Email: {{ gettype($config) === 'object' ? $config[0]['email'] : '' }}</p>
+                        {{-- <div class="social-icons follow-icons" style="font-size:105%"><a href="#" target="_blank"
                                 data-label="Facebook" rel="noopener noreferrer nofollow"
                                 class="icon plain facebook tooltip" title="Follow on Facebook"
                                 aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="#"
@@ -48,7 +59,7 @@
                                 aria-label="Follow on Twitter"><i class="icon-twitter"></i></a><a href="#"
                                 target="_blank" rel="noopener noreferrer nofollow" data-label="YouTube"
                                 class="icon plain  youtube tooltip" title="Follow on YouTube"
-                                aria-label="Follow on YouTube"><i class="icon-youtube"></i></a></div>
+                                aria-label="Follow on YouTube"><i class="icon-youtube"></i></a></div> --}}
                     </div>
                 </div>
             </div>

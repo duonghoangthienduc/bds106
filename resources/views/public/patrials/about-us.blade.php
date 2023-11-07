@@ -1,3 +1,10 @@
+@php
+    $config = '';
+    if (Cache::has('CONFIG')) {
+        $config = Cache::get('CONFIG');
+    }
+@endphp
+@if (count($getNews) > 0 || (gettype($config) === 'object' && !is_null($config[0]['iframe_youtube']) ))
 <section class="section section-ve-chung-toi" id="section_782243146">
     <div class="bg section-bg fill bg-fill  bg-loaded">
     </div>
@@ -18,19 +25,22 @@
                     </div>
                     <div class="row" id="row-905970194">
                         <div id="col-1305041140"
-                            class="col div-no-padding @if (isset($getNews)) medium-8 small-12 large-8 @else medium-12 small-12 large-12 @endif">
+                            class="col div-no-padding @if (count($getNews) > 0) medium-8 small-12 large-8 @else medium-12 small-12 large-12 @endif">
                             <div class="col-inner">
                                 <div class="video video-fit mb" style="padding-top:56.25%;">
-                                    <p><iframe title="Phim giới thiệu Doanh Nghiệp HƯNG THỊNH" width="1020"
+                                    <p>
+                                        {{-- <iframe title="Phim giới thiệu Doanh Nghiệp HƯNG THỊNH" width="1020"
                                             height="574"
                                             src="https://www.youtube.com/embed/yFDZPLMvWCk?feature=oembed"
                                             frameborder="0"
                                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe></p>
+                                            allowfullscreen></iframe> --}}
+                                        {!! gettype($config) === 'object' ? $config[0]['iframe_youtube'] : '' !!}
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div id="col-1178396783" class="col div-no-padding medium-4 small-12 large-4">
+                        <div id="col-1178396783" class="col div-no-padding  @if (count($getNews) > 0) medium-4 small-12 large-4 @endif">
                             <div class="col-inner">
                                 <div class="row large-columns-1 medium-columns-1 small-columns-1">
                                     @if (isset($getNews))
@@ -82,3 +92,5 @@
         }
     </style>
 </section>
+@endif
+
